@@ -15,8 +15,14 @@ public class Schedule {
     Lecture COP3223H, EDF2005, IDH1920H, MAC2313H, SPC1603H;
     ClassDay days[] = new ClassDay[]{null, ClassDay.MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, null};
     List<Lecture> classes;
+    private static Schedule s = null;
 
-    public Schedule() {
+    public static Schedule getInstance() {
+        if (s == null) s = new Schedule();
+        return s;
+    }
+
+    private Schedule() {
         COP3223H = new Lecture("COP", 9, 30, 10, 20, ClassDay.MONDAY, ClassDay.WEDNESDAY, ClassDay.FRIDAY);
         EDF2005 = new Lecture("EDF", 10, 30, 13, 20, ClassDay.WEDNESDAY);
         IDH1920H = new Lecture("IDH", 16, 30, 18, 50, ClassDay.MONDAY);
@@ -29,12 +35,13 @@ public class Schedule {
     public Lecture getCurrentClass() { //TODO: Test
         Calendar cal = Calendar.getInstance();
         LocalTime now = new LocalTime(cal);
-        ClassDay day = getDay(cal);
+        ClassDay day = getDay();
 
         for (Lecture l : classes) {
             try {
                 if (now.isAfter(l.getStart(day)) && now.isBefore(l.getStart(day))) return l;
-            } catch (IllegalArgumentException ignored) {}
+            } catch (IllegalArgumentException ignored) {
+            }
         }
 
         return null;
@@ -43,24 +50,31 @@ public class Schedule {
     public Lecture getNextClass() { //TODO: Test
         Calendar cal = Calendar.getInstance();
         LocalTime now = new LocalTime(cal);
-        ClassDay day = getDay(cal);
+        ClassDay day = getDay();
         Lecture next = null;
 
         for (Lecture l : classes) {
             try {
                 if (now.isBefore(l.getStart(day)))
-                    if(next == null || l.getStart(day).isBefore(next.getStart(day)))
+                    if (next == null || l.getStart(day).isBefore(next.getStart(day)))
                         next = l;
-            } catch (IllegalArgumentException ignored) {}
+            } catch (IllegalArgumentException ignored) {
+            }
         }
 
         return next;
     }
 
-    private ClassDay getDay(Calendar cal) {
+    ClassDay getDay() {
+        Calendar cal = Calendar.getInstance();
         return days[cal.get(Calendar.DAY_OF_WEEK)];
     }
-    
+
+    LocalTime now() {
+        Calendar cal = Calendar.getInstance();
+        return new LocalTime(cal);
+    }
+
     public enum ClassDay {
         MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY;
     }

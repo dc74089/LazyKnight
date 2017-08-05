@@ -1,8 +1,9 @@
 package com.vegetarianbaconite.lazyknight;
 
 import org.joda.time.LocalTime;
+import org.joda.time.Minutes;
+import org.joda.time.Period;
 
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,7 +12,10 @@ public class Lecture {
     private Map<Schedule.ClassDay, LocalTime> start = new HashMap<>();
     private Map<Schedule.ClassDay, LocalTime> end = new HashMap<>();
 
-    public Lecture(){};
+    public Lecture() {
+    }
+
+    ;
 
     public Lecture(String name, int startHour, int startMinute, int endHour, int endMinute, Schedule.ClassDay... days) {
         setClassName(name);
@@ -21,8 +25,23 @@ public class Lecture {
         }
     }
 
-    public LocalTime getStart(Schedule.ClassDay day){
-        if(start.containsKey(day)) return start.get(day);
+    public int getTimeTillStart(Schedule.ClassDay day, LocalTime now) { //TODO: Test
+        Period p = new Period(now, getStart(day));
+        return Minutes.standardMinutesIn(p).getMinutes();
+    }
+
+    public int getProgressInClass(Schedule.ClassDay day, LocalTime now) { //TODO: Test
+        Period p = new Period(getStart(day), now);
+        return Minutes.standardMinutesIn(p).getMinutes();
+    }
+
+    public int getLength(Schedule.ClassDay day) { //TODO: Test
+        Period p = new Period(getStart(day), getEnd(day));
+        return Minutes.standardMinutesIn(p).getMinutes();
+    }
+
+    public LocalTime getStart(Schedule.ClassDay day) {
+        if (start.containsKey(day)) return start.get(day);
         return null;
     }
 
