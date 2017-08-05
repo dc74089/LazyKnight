@@ -21,13 +21,16 @@ public class ScheduleComplicationService extends ComplicationProviderService {
     public void onComplicationUpdate(int compID, int dataType, ComplicationManager complicationManager) {
         if (s == null) s = Schedule.getInstance();
 
-        ComplicationData data = null;
+        ComplicationData data;
         Lecture current = s.getCurrentClass();
         Lecture next = s.getNextClass();
         Boolean classActive, watchingNext = false;
 
-        classActive = current != null;
-        if (next != null) watchingNext = next.getTimeTillStart(s.getDay(), s.now()) < 60;
+        classActive = current != null; //TODO: Broken
+        if (next != null)
+            watchingNext = next.getTimeTillStart(s.getDay(), s.now()) < 60; //TODO: Broken
+
+        Log.d(LOG_KEY, "In class: " + classActive + "; Watching next: " + watchingNext);
 
         String title = classActive ? current.className : watchingNext ? next.className : "UCF";
         int progress = classActive ? current.getProgressInClass(s.getDay(), s.now()) :

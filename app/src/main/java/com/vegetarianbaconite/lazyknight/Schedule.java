@@ -13,7 +13,7 @@ import static com.vegetarianbaconite.lazyknight.Schedule.ClassDay.WEDNESDAY;
 
 public class Schedule {
     Lecture COP3223H, EDF2005, IDH1920H, MAC2313H, SPC1603H;
-    ClassDay days[] = new ClassDay[]{null, ClassDay.MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, null};
+    ClassDay days[] = new ClassDay[]{null, null, ClassDay.MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, null};
     List<Lecture> classes;
     private static Schedule s = null;
 
