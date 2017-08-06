@@ -39,7 +39,7 @@ public class Schedule {
 
         for (Lecture l : classes) {
             try {
-                if (now.isAfter(l.getStart(day)) && now.isBefore(l.getStart(day))) return l;
+                if (now.isAfter(l.getStart(day)) && now.isBefore(l.getEnd(day))) return l;
             } catch (IllegalArgumentException ignored) {
             }
         }
