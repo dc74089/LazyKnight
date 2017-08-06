@@ -12,9 +12,8 @@ import static com.vegetarianbaconite.lazyknight.Schedule.ClassDay.TUESDAY;
 import static com.vegetarianbaconite.lazyknight.Schedule.ClassDay.WEDNESDAY;
 
 public class Schedule {
-    Lecture COP3223H, EDF2005, IDH1920H, MAC2313H, SPC1603H;
-    ClassDay days[] = new ClassDay[]{null, null, ClassDay.MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, null};
-    List<Lecture> classes;
+    private ClassDay days[] = new ClassDay[]{null, null, ClassDay.MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, null};
+    private List<Lecture> classes;
     private static Schedule s = null;
 
     public static Schedule getInstance() {
@@ -23,11 +22,11 @@ public class Schedule {
     }
 
     private Schedule() {
-        COP3223H = new Lecture("COP", 9, 30, 10, 20, ClassDay.MONDAY, ClassDay.WEDNESDAY, ClassDay.FRIDAY);
-        EDF2005 = new Lecture("EDF", 10, 30, 13, 20, ClassDay.WEDNESDAY);
-        IDH1920H = new Lecture("IDH", 16, 30, 18, 50, ClassDay.MONDAY);
-        MAC2313H = new Lecture("MAC", 9, 0, 10, 50, TUESDAY, ClassDay.THURSDAY);
-        SPC1603H = new Lecture("SPC", 12, 0, 13, 15, TUESDAY, ClassDay.THURSDAY);
+        Lecture COP3223H = new Lecture("COP", 9, 30, 10, 20, ClassDay.MONDAY, ClassDay.WEDNESDAY, ClassDay.FRIDAY);
+        Lecture EDF2005 = new Lecture("EDF", 10, 30, 13, 20, ClassDay.WEDNESDAY);
+        Lecture IDH1920H = new Lecture("IDH", 16, 30, 18, 50, ClassDay.MONDAY);
+        Lecture MAC2313H = new Lecture("MAC", 9, 0, 10, 50, TUESDAY, ClassDay.THURSDAY);
+        Lecture SPC1603H = new Lecture("SPC", 12, 0, 13, 15, TUESDAY, ClassDay.THURSDAY);
 
         classes = Arrays.asList(COP3223H, EDF2005, IDH1920H, MAC2313H, SPC1603H);
     }

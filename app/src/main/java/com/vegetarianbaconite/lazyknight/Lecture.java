@@ -15,8 +15,6 @@ public class Lecture {
     public Lecture() {
     }
 
-    ;
-
     public Lecture(String name, int startHour, int startMinute, int endHour, int endMinute, Schedule.ClassDay... days) {
         setClassName(name);
         for (Schedule.ClassDay day : days) {
