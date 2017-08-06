@@ -1,7 +1,6 @@
 package com.vegetarianbaconite.lazyknight;
 
 import android.app.PendingIntent;
-import android.content.ComponentName;
 import android.content.Intent;
 import android.support.wearable.complications.ComplicationData;
 import android.support.wearable.complications.ComplicationManager;
@@ -28,7 +27,6 @@ public class ScheduleComplicationService extends ComplicationProviderService {
     public void onComplicationUpdate(int compID, int dataType, ComplicationManager complicationManager) {
         if (s == null) s = Schedule.getInstance();
 
-        ComponentName thisProvider = new ComponentName(this, getClass());
         PendingIntent infoIntent = PendingIntent.getActivity(getApplicationContext(), 823,
                 new Intent(getApplicationContext(), ClassInfoActivity.class), 0);
 
@@ -37,15 +35,16 @@ public class ScheduleComplicationService extends ComplicationProviderService {
         Lecture next = s.getNextClass();
         Boolean classActive, watchingNext = false;
 
-        classActive = current != null; //TODO: Broken
+        classActive = current != null;
         if (next != null)
-            watchingNext = next.getTimeTillStart(s.getDay(), s.now()) < 60; //TODO: Broken
+            watchingNext = next.getTimeTillStart(s.getDay(), s.now()) < 60;
 
         Log.d(LOG_KEY, "In class: " + classActive + "; Watching next: " + watchingNext);
 
         String title = classActive ? current.shortName : watchingNext ? next.shortName : "UCF";
         int progress = classActive ? current.getProgressInClass(s.getDay(), s.now()) :
                 watchingNext ? next.getTimeTillStart(s.getDay(), s.now()) : 60;
+        int max = classActive ? current.getLength(s.getDay()) : 60;
 
         Log.d(LOG_KEY, "On Complication Update... Type: " + dataType);
 
@@ -53,8 +52,9 @@ public class ScheduleComplicationService extends ComplicationProviderService {
             data = new ComplicationData.Builder(ComplicationData.TYPE_RANGED_VALUE)
                     .setValue(progress)
                     .setMinValue(0)
-                    .setMaxValue(classActive ? current.getLength(s.getDay()) : 60)
-                    .setShortTitle(ComplicationText.plainText(title))
+                    .setMaxValue(max)
+                    .setShortText(ComplicationText.plainText("" + (classActive ? max - progress : progress))) //TODO: Test for accuracy
+                    .setShortTitle(ComplicationText.plainText(classActive ? "Left" : "Until"))
                     .setTapAction(infoIntent)
                     .build();
         else
