@@ -17,6 +17,11 @@ public class ClassInfoActivity extends Activity {
         name = (TextView) findViewById(R.id.ciName);
         prof = (TextView) findViewById(R.id.ciProfessor);
         room = (TextView) findViewById(R.id.ciRoom);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
 
         Schedule s = Schedule.getInstance();
         Lecture l = s.getCurrentClass() != null ? s.getCurrentClass() : s.getNextClass();
