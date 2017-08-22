@@ -22,11 +22,11 @@ public class Schedule {
     }
 
     private Schedule() {
-        Lecture COP3223H = new Lecture("COP 3223H", "Intro to Prog w/ C", "Staff", "ENG1, O227",
+        Lecture COP3223H = new Lecture("COP 3223H", "Intro to Prog w/ C", "Staff", "ENG1 O227",
                 9, 30, 10, 20, ClassDay.MONDAY, ClassDay.WEDNESDAY, ClassDay.FRIDAY);
-        Lecture EDF2005 = new Lecture("EDF 2005", "Intro to Teaching Prof", "Philip Koger", "CB1, O309",
+        Lecture EDF2005 = new Lecture("EDF 2005", "Intro to Teaching Prof", "Philip Koger", "CB1 O309",
                 10, 30, 13, 20, ClassDay.WEDNESDAY);
-        Lecture IDH1920H = new Lecture("IDH 1920H", "Honors Symposium", "Martin Dupuis", "CB1, O121\nNSC O209",
+        Lecture IDH1920H = new Lecture("IDH 1920H", "Honors Symposium", "Martin Dupuis", "CB1 O121\nNSC O209",
                 16, 30, 18, 50, ClassDay.MONDAY);
         Lecture MAC2313H = new Lecture("MAC 2313H", "H Calculus 3", "Zhisheng Shuai", "MSB 0109",
                 9, 0, 10, 50, TUESDAY, ClassDay.THURSDAY);
