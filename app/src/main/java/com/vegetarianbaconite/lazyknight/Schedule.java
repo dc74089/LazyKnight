@@ -2,7 +2,6 @@ package com.vegetarianbaconite.lazyknight;
 
 import org.joda.time.LocalTime;
 
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
@@ -22,18 +21,7 @@ public class Schedule {
     }
 
     private Schedule() {
-        Lecture COP3223H = new Lecture("COP 3223H", "Intro to Prog w/ C", "Staff", "ENG1 O227",
-                9, 30, 10, 20, ClassDay.MONDAY, ClassDay.WEDNESDAY, ClassDay.FRIDAY);
-        Lecture EDF2005 = new Lecture("EDF 2005", "Intro to Teaching Prof", "Philip Koger", "CB1 O309",
-                10, 30, 13, 20, ClassDay.WEDNESDAY);
-        Lecture IDH1920H = new Lecture("IDH 1920H", "Honors Symposium", "Martin Dupuis", "CB1 O121\nNSC O209",
-                16, 30, 18, 50, ClassDay.MONDAY);
-        Lecture MAC2313H = new Lecture("MAC 2313H", "H Calculus 3", "Zhisheng Shuai", "MSB 0109",
-                9, 0, 10, 50, TUESDAY, ClassDay.THURSDAY);
-        Lecture SPC1603H = new Lecture("SPC 1603H", "H Fund Tech Pres", "George Musambira", "NSC O147",
-                12, 0, 13, 15, TUESDAY, ClassDay.THURSDAY);
-
-        classes = Arrays.asList(COP3223H, EDF2005, IDH1920H, MAC2313H, SPC1603H);
+        classes = MySchedule.freshmanFall();
     }
 
     public Lecture getCurrentClass() {
@@ -69,12 +57,12 @@ public class Schedule {
         return next;
     }
 
-    ClassDay getDay() {
+    public ClassDay getDay() {
         Calendar cal = Calendar.getInstance();
         return days[cal.get(Calendar.DAY_OF_WEEK)];
     }
 
-    LocalTime now() {
+    public LocalTime now() {
         Calendar cal = Calendar.getInstance();
         return new LocalTime(cal);
     }
