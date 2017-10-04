@@ -11,15 +11,15 @@ import static com.vegetarianbaconite.lazyknight.Schedule.ClassDay.WEDNESDAY;
 
 public class MySchedule {
     static List<Lecture> freshmanFall() {
-        Lecture COP3223H = new Lecture("COP 3223H", "H Intro to Prog w/ C", "Staff", "ENG1 O227",
+        Lecture COP3223H = new Lecture("COP 3223H", "H Intro to Prog w/ C", "Staff", "ENG1 227",
                 9, 30, 10, 20, MONDAY, WEDNESDAY, FRIDAY);
-        Lecture EDF2005 = new Lecture("EDF 2005", "Intro to Teaching Prof", "Philip Koger", "CB1 O309",
+        Lecture EDF2005 = new Lecture("EDF 2005", "Intro to Teaching Prof", "Philip Koger", "CB1 309",
                 10, 30, 13, 20, WEDNESDAY);
-        Lecture IDH1920H = new Lecture("IDH 1920H", "Honors Symposium", "Martin Dupuis", "CB1 O121\nNSC O209",
+        Lecture IDH1920H = new Lecture("IDH 1920H", "Honors Symposium", "Martin Dupuis", "CB1 121\nNSC 209",
                 16, 30, 18, 50, MONDAY);
-        Lecture MAC2313H = new Lecture("MAC 2313H", "H Calculus 3", "Zhisheng Shuai", "MSB 0109",
+        Lecture MAC2313H = new Lecture("MAC 2313H", "H Calculus 3", "Zhisheng Shuai", "MSB 109",
                 9, 0, 10, 50, TUESDAY, THURSDAY);
-        Lecture SPC1603H = new Lecture("SPC 1603H", "H Fund Tech Pres", "George Musambira", "NSC O147",
+        Lecture SPC1603H = new Lecture("SPC 1603H", "H Fund Tech Pres", "George Musambira", "NSC 147",
                 12, 0, 13, 15, TUESDAY, THURSDAY);
 
         return Arrays.asList(COP3223H, EDF2005, IDH1920H, MAC2313H, SPC1603H);
