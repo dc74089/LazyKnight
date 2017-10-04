@@ -30,7 +30,7 @@ public class MySchedule {
                 9, 00, 10, 15, TUESDAY, THURSDAY);
         Lecture COT3100H = new Lecture("COP 3100H", "H Intro to Discrete", "Staff", "ENG1 383",
                 9, 00, 10, 15, MONDAY, WEDNESDAY);
-        Lecture EME2040 = new Lecture("EME 2040", "Intro to Tech for Ed", "Staff", "TA 303",
+        Lecture EME2040 = new Lecture("EME 2040", "Intro to Tech for Ed", "Richard Thripp", "TA 303",
                 10, 30, 13, 20, MONDAY);
         Lecture ENC1102H = new Lecture("ENC 1002H", "H Composition 2", "Marcy Galbreath", "BHC 128",
                 12, 00, 13, 15, TUESDAY, THURSDAY);
