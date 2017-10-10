@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.support.wearable.complications.ProviderUpdateRequester;
 import android.widget.TextView;
 
+import com.vegetarianbaconite.schedulelib.Lecture;
+import com.vegetarianbaconite.schedulelib.Schedule;
+
 public class ClassInfoActivity extends Activity {
 
     private TextView classCode, name, prof, room;

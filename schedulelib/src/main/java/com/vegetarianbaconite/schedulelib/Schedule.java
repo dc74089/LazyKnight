@@ -1,17 +1,18 @@
-package com.vegetarianbaconite.lazyknight;
+package com.vegetarianbaconite.schedulelib;
 
 import org.joda.time.LocalTime;
 
 import java.util.Calendar;
 import java.util.List;
 
-import static com.vegetarianbaconite.lazyknight.Schedule.ClassDay.FRIDAY;
-import static com.vegetarianbaconite.lazyknight.Schedule.ClassDay.THURSDAY;
-import static com.vegetarianbaconite.lazyknight.Schedule.ClassDay.TUESDAY;
-import static com.vegetarianbaconite.lazyknight.Schedule.ClassDay.WEDNESDAY;
+import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.FRIDAY;
+import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.MONDAY;
+import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.THURSDAY;
+import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.TUESDAY;
+import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.WEDNESDAY;
 
 public class Schedule {
-    private ClassDay days[] = new ClassDay[]{null, null, ClassDay.MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, null};
+    private ClassDay days[] = new ClassDay[]{null, null, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, null};
     private List<Lecture> classes;
     private static Schedule s = null;
 

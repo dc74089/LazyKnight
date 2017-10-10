@@ -23,5 +23,5 @@ dependencies {
     //compile 'com.android.support:wear:26.0.0'
     compile 'com.google.android.support:wearable:2.0.3'
     provided 'com.google.android.wearable:wearable:2.0.3'
-    compile 'joda-time:joda-time:2.9.4'
+    compile project(path: ':schedulelib')
 }

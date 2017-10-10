@@ -8,6 +8,9 @@ import android.support.wearable.complications.ComplicationProviderService;
 import android.support.wearable.complications.ComplicationText;
 import android.util.Log;
 
+import com.vegetarianbaconite.schedulelib.Lecture;
+import com.vegetarianbaconite.schedulelib.Schedule;
+
 public class ScheduleComplicationService extends ComplicationProviderService {
     Schedule s;
     String LOG_KEY = "lazyknight-debug";
@@ -41,7 +44,7 @@ public class ScheduleComplicationService extends ComplicationProviderService {
 
         Log.d(LOG_KEY, "In class: " + classActive + "; Watching next: " + watchingNext);
 
-        String title = classActive ? current.shortName : watchingNext ? next.shortName : "UCF";
+        String title = classActive ? current.getShortName() : watchingNext ? next.getShortName() : "UCF";
         int progress = classActive ? current.getProgressInClass(s.getDay(), s.now()) :
                 watchingNext ? next.getTimeTillStart(s.getDay(), s.now()) : 60;
         int max = classActive ? current.getLength(s.getDay()) : 60;

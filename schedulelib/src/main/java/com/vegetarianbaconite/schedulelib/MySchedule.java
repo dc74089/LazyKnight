@@ -1,13 +1,13 @@
-package com.vegetarianbaconite.lazyknight;
+package com.vegetarianbaconite.schedulelib;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static com.vegetarianbaconite.lazyknight.Schedule.ClassDay.FRIDAY;
-import static com.vegetarianbaconite.lazyknight.Schedule.ClassDay.MONDAY;
-import static com.vegetarianbaconite.lazyknight.Schedule.ClassDay.THURSDAY;
-import static com.vegetarianbaconite.lazyknight.Schedule.ClassDay.TUESDAY;
-import static com.vegetarianbaconite.lazyknight.Schedule.ClassDay.WEDNESDAY;
+import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.FRIDAY;
+import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.MONDAY;
+import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.THURSDAY;
+import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.TUESDAY;
+import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.WEDNESDAY;
 
 public class MySchedule {
     static List<Lecture> freshmanFall() {

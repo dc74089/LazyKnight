@@ -1,4 +1,4 @@
-package com.vegetarianbaconite.lazyknight;
+package com.vegetarianbaconite.schedulelib;
 
 import org.joda.time.LocalTime;
 import org.joda.time.Minutes;
