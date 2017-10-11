@@ -1,4 +1,4 @@
-package com.vegetarianbaconite.lazyknight;
+package com.vegetarianbaconite.lazyknight.wear;
 
 import android.app.Activity;
 import android.content.ComponentName;
