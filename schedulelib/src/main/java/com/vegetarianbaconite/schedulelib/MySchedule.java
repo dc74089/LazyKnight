@@ -10,7 +10,10 @@ import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.TUESDAY;
 import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.WEDNESDAY;
 
 public class MySchedule {
-    static List<Lecture> freshmanFall() {
+    public static List<List<Lecture>> availableSchedules = Arrays.asList(freshmanFall(), freshmanSpring());
+    public static List<String> scheduleNames = Arrays.asList("Fall 2017", "Spring 2018");
+
+    public static List<Lecture> freshmanFall() {
         Lecture COP3223H = new Lecture("COP 3223H", "H Intro to Prog w/ C", "Staff", "ENG1 227",
                 9, 30, 10, 20, MONDAY, WEDNESDAY, FRIDAY);
         Lecture EDF2005 = new Lecture("EDF 2005", "Intro to Teaching Prof", "Philip Koger", "CB1 309",
@@ -25,7 +28,7 @@ public class MySchedule {
         return Arrays.asList(COP3223H, EDF2005, IDH1920H, MAC2313H, SPC1603H);
     }
 
-    static List<Lecture> freshmanSpring() {
+    public static List<Lecture> freshmanSpring() {
         Lecture COP3502H = new Lecture("COP 3502H", "H Computer Science 1", "Staff", "ENG1 286",
                 9, 00, 10, 15, TUESDAY, THURSDAY);
         Lecture COT3100H = new Lecture("COP 3100H", "H Intro to Discrete", "Staff", "ENG1 383",
