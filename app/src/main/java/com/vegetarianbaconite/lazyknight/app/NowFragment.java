@@ -3,6 +3,7 @@ package com.vegetarianbaconite.lazyknight.app;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +18,7 @@ import org.joda.time.format.DateTimeFormatter;
 
 public class NowFragment extends Fragment {
     View root;
-    DateTimeFormatter df = DateTimeFormat.forPattern("E HH:mm");
+    final DateTimeFormatter df = DateTimeFormat.forPattern("E HH:mm");
 
     @Nullable
     @Override
@@ -37,9 +38,11 @@ public class NowFragment extends Fragment {
             ((TextView) root.findViewById(R.id.nStart)).setText(current.getStartString());
             ((TextView) root.findViewById(R.id.nEnd)).setText(current.getEndString());
 
+            Log.d("Now", "Inflating fragment_now");
             return root;
         }
 
+        Log.d("Now", "Inflating fragment_blank");
         return inflater.inflate(R.layout.fragment_blank, container, false);
     }
 }

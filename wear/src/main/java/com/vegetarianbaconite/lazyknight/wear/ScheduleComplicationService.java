@@ -12,8 +12,8 @@ import com.vegetarianbaconite.schedulelib.Lecture;
 import com.vegetarianbaconite.schedulelib.Schedule;
 
 public class ScheduleComplicationService extends ComplicationProviderService {
-    Schedule s;
-    String LOG_KEY = "lazyknight-debug";
+    private Schedule s;
+    private final String LOG_KEY = "lazyknight-debug";
 
     /*
      * Julia is the coolest person on the planet. just wanted to let you know.

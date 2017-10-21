@@ -12,7 +12,7 @@ import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.TUESDAY;
 import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.WEDNESDAY;
 
 public class Schedule {
-    private ClassDay days[] = new ClassDay[]{null, null, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, null};
+    private final ClassDay days[] = new ClassDay[]{null, null, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, null};
     private List<Lecture> classes;
     private static Schedule s = null;
 
@@ -69,6 +69,6 @@ public class Schedule {
     }
 
     public enum ClassDay {
-        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY;
+        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY
     }
 }

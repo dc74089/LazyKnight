@@ -4,7 +4,7 @@
     android:id="@+id/ciParent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.vegetarianbaconite.lazyknight.ClassInfoActivity"
+    tools:context="com.vegetarianbaconite.lazyknight.wear.ClassInfoActivity"
     tools:deviceIds="wear">
 
     <LinearLayout
