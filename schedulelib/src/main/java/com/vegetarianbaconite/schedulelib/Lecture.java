@@ -51,6 +51,10 @@ public class Lecture {
         return Minutes.standardMinutesIn(p).getMinutes();
     }
 
+    public int getTimeLeft(Schedule.ClassDay day, LocalTime now) {
+        return getLength(day) - getProgressInClass(day, now);
+    }
+
     public LocalTime getStart(Schedule.ClassDay day) {
         if (start.containsKey(day)) return start.get(day);
         return null;
