@@ -45,11 +45,11 @@ public class NowFragment extends Fragment implements View.OnClickListener {
 
             if (next.getTimeTillStart(s.getDay(), new LocalTime()) < 30) {
                 current = next;
-
                 state = 1;
             }
         } else if (current == null) {
             current = s.getNextClass();
+            state = 1;
         }
 
         if (current != null) {
