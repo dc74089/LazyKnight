@@ -79,7 +79,8 @@ public class NowFragment extends Fragment implements View.OnClickListener {
     }
 
     private void update() {
-        now.setText(df.print(new LocalDateTime()));
+        if (state != 0)
+            now.setText(df.print(new LocalDateTime()));
 
         switch (state) {
             case 1:
@@ -93,7 +94,7 @@ public class NowFragment extends Fragment implements View.OnClickListener {
                         current.getTimeLeft(s.getDay(), new LocalTime())));
                 break;
             default:
-                until.setVisibility(View.GONE);
+                break;
         }
     }
 
