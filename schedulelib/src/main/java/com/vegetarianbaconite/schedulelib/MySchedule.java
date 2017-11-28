@@ -14,11 +14,11 @@ public class MySchedule {
     public static List<String> scheduleNames = Arrays.asList("Fall 2017", "Spring 2018");
 
     public static List<Lecture> freshmanFall() {
-        Lecture COP3223H = new Lecture("COP 3223H", "H Intro to Prog w/ C", "Staff", "ENG1 227",
+        Lecture COP3223H = new Lecture("COP 3223H", "H Intro to Prog w/ C", "Glenn Martin", "ENG1 227",
                 9, 30, 10, 20, MONDAY, WEDNESDAY, FRIDAY);
         Lecture EDF2005 = new Lecture("EDF 2005", "Intro to Teaching Prof", "Philip Koger", "CB1 309",
                 10, 30, 13, 20, WEDNESDAY);
-        Lecture IDH1920H = new Lecture("IDH 1920H", "Honors Symposium", "Martin Dupuis", "CB1 121\nNSC 209",
+        Lecture IDH1920H = new Lecture("IDH 1920H", "Honors Symposium", "Reilly Dearth", "CB1 121\nNSC 209",
                 16, 30, 18, 50, MONDAY);
         Lecture MAC2313H = new Lecture("MAC 2313H", "H Calculus 3", "Zhisheng Shuai", "MSB 109",
                 9, 0, 10, 50, TUESDAY, THURSDAY);
