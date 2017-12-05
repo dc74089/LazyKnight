@@ -13,13 +13,13 @@ public class Lecture {
     String shortName, className, professor, room;
     String startString, endString;
     String dayString = "";
-    private Map<Schedule.ClassDay, LocalTime> start = new HashMap<>();
-    private Map<Schedule.ClassDay, LocalTime> end = new HashMap<>();
+    private Map<ScheduleUtil.ClassDay, LocalTime> start = new HashMap<>();
+    private Map<ScheduleUtil.ClassDay, LocalTime> end = new HashMap<>();
 
     public Lecture() {
     }
 
-    public Lecture(String shortName, String className, String professor, String room, int startHour, int startMinute, int endHour, int endMinute, Schedule.ClassDay... days) {
+    public Lecture(String shortName, String className, String professor, String room, int startHour, int startMinute, int endHour, int endMinute, ScheduleUtil.ClassDay... days) {
         setShortName(shortName);
         setClassName(className);
         setProfessor(professor);
@@ -30,37 +30,37 @@ public class Lecture {
 
         setDayString(days);
 
-        for (Schedule.ClassDay day : days) {
+        for (ScheduleUtil.ClassDay day : days) {
             start.put(day, new LocalTime(startHour, startMinute));
             end.put(day, new LocalTime(endHour, endMinute));
         }
     }
 
-    public int getTimeTillStart(Schedule.ClassDay day, LocalTime now) { //TODO: Test
+    public int getTimeTillStart(ScheduleUtil.ClassDay day, LocalTime now) { //TODO: Test
         Period p = new Period(now, getStart(day));
         return Minutes.standardMinutesIn(p).getMinutes();
     }
 
-    public int getProgressInClass(Schedule.ClassDay day, LocalTime now) { //TODO: Test
+    public int getProgressInClass(ScheduleUtil.ClassDay day, LocalTime now) { //TODO: Test
         Period p = new Period(getStart(day), now);
         return Minutes.standardMinutesIn(p).getMinutes();
     }
 
-    public int getLength(Schedule.ClassDay day) { //TODO: Test
+    public int getLength(ScheduleUtil.ClassDay day) { //TODO: Test
         Period p = new Period(getStart(day), getEnd(day));
         return Minutes.standardMinutesIn(p).getMinutes();
     }
 
-    public int getTimeLeft(Schedule.ClassDay day, LocalTime now) {
+    public int getTimeLeft(ScheduleUtil.ClassDay day, LocalTime now) {
         return getLength(day) - getProgressInClass(day, now);
     }
 
-    public LocalTime getStart(Schedule.ClassDay day) {
+    public LocalTime getStart(ScheduleUtil.ClassDay day) {
         if (start.containsKey(day)) return start.get(day);
         return null;
     }
 
-    public LocalTime getEnd(Schedule.ClassDay day) {
+    public LocalTime getEnd(ScheduleUtil.ClassDay day) {
         if (end.containsKey(day)) return end.get(day);
         return null;
     }
@@ -121,19 +121,19 @@ public class Lecture {
         this.dayString = dayString;
     }
 
-    public void setDayString(Schedule.ClassDay[] days) {
-        List<Schedule.ClassDay> dayList = Arrays.asList(days);
+    public void setDayString(ScheduleUtil.ClassDay[] days) {
+        List<ScheduleUtil.ClassDay> dayList = Arrays.asList(days);
         this.dayString = "";
 
-        if (dayList.contains(Schedule.ClassDay.MONDAY))
+        if (dayList.contains(ScheduleUtil.ClassDay.MONDAY))
             dayString += "M";
-        if (dayList.contains(Schedule.ClassDay.TUESDAY))
+        if (dayList.contains(ScheduleUtil.ClassDay.TUESDAY))
             dayString += "T";
-        if (dayList.contains(Schedule.ClassDay.WEDNESDAY))
+        if (dayList.contains(ScheduleUtil.ClassDay.WEDNESDAY))
             dayString += "W";
-        if (dayList.contains(Schedule.ClassDay.THURSDAY))
+        if (dayList.contains(ScheduleUtil.ClassDay.THURSDAY))
             dayString += "R";
-        if (dayList.contains(Schedule.ClassDay.FRIDAY))
+        if (dayList.contains(ScheduleUtil.ClassDay.FRIDAY))
             dayString += "F";
 
     }

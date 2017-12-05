@@ -3,15 +3,17 @@ package com.vegetarianbaconite.schedulelib;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.FRIDAY;
-import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.MONDAY;
-import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.THURSDAY;
-import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.TUESDAY;
-import static com.vegetarianbaconite.schedulelib.Schedule.ClassDay.WEDNESDAY;
+import static com.vegetarianbaconite.schedulelib.ScheduleUtil.ClassDay.FRIDAY;
+import static com.vegetarianbaconite.schedulelib.ScheduleUtil.ClassDay.MONDAY;
+import static com.vegetarianbaconite.schedulelib.ScheduleUtil.ClassDay.THURSDAY;
+import static com.vegetarianbaconite.schedulelib.ScheduleUtil.ClassDay.TUESDAY;
+import static com.vegetarianbaconite.schedulelib.ScheduleUtil.ClassDay.WEDNESDAY;
 
 public class MySchedule {
-    public static List<List<Lecture>> availableSchedules = Arrays.asList(freshmanFall(), freshmanSpring());
-    public static List<String> scheduleNames = Arrays.asList("Fall 2017", "Spring 2018");
+    public static List<List<Lecture>> availableSchedules = Arrays.asList(freshmanSpring(), freshmanFall());
+    public static List<String> scheduleNames = Arrays.asList("Spring 2018", "Fall 2017");
+
+    public static final List<Lecture> currentSemester = freshmanSpring();
 
     public static List<Lecture> freshmanFall() {
         Lecture COP3223H = new Lecture("COP 3223H", "H Intro to Prog w/ C", "Glenn Martin", "ENG1 227",

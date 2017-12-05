@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.vegetarianbaconite.schedulelib.Lecture;
-import com.vegetarianbaconite.schedulelib.Schedule;
+import com.vegetarianbaconite.schedulelib.ScheduleUtil;
 
 import org.joda.time.LocalDateTime;
 import org.joda.time.LocalTime;
@@ -21,7 +21,7 @@ public class NowFragment extends Fragment implements View.OnClickListener {
     View root;
     TextView now, until;
 
-    Schedule s;
+    ScheduleUtil s;
     Lecture current;
     int state; //0 = blank, 1 = next, 2 = current
 
@@ -31,7 +31,7 @@ public class NowFragment extends Fragment implements View.OnClickListener {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        s = Schedule.getInstance();
+        s = ScheduleUtil.getInstance();
     }
 
     @Nullable
