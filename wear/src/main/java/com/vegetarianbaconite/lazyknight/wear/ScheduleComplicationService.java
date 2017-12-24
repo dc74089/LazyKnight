@@ -9,10 +9,10 @@ import android.support.wearable.complications.ComplicationText;
 import android.util.Log;
 
 import com.vegetarianbaconite.schedulelib.Lecture;
-import com.vegetarianbaconite.schedulelib.Schedule;
+import com.vegetarianbaconite.schedulelib.ScheduleUtil;
 
 public class ScheduleComplicationService extends ComplicationProviderService {
-    private Schedule s;
+    private ScheduleUtil s;
     private final String LOG_KEY = "lazyknight-debug";
 
     /*
@@ -21,14 +21,14 @@ public class ScheduleComplicationService extends ComplicationProviderService {
 
     @Override
     public void onComplicationActivated(int complicationId, int type, ComplicationManager manager) {
-        s = Schedule.getInstance();
+        s = ScheduleUtil.getInstance();
 
         Log.d(LOG_KEY, "Complication Activated");
     }
 
     @Override
     public void onComplicationUpdate(int compID, int dataType, ComplicationManager complicationManager) {
-        if (s == null) s = Schedule.getInstance();
+        if (s == null) s = ScheduleUtil.getInstance();
 
         PendingIntent infoIntent = PendingIntent.getActivity(getApplicationContext(), 823,
                 new Intent(getApplicationContext(), ClassInfoActivity.class), 0);

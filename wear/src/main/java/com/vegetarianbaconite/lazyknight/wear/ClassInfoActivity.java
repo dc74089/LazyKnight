@@ -7,7 +7,7 @@ import android.support.wearable.complications.ProviderUpdateRequester;
 import android.widget.TextView;
 
 import com.vegetarianbaconite.schedulelib.Lecture;
-import com.vegetarianbaconite.schedulelib.Schedule;
+import com.vegetarianbaconite.schedulelib.ScheduleUtil;
 
 public class ClassInfoActivity extends Activity {
 
@@ -32,7 +32,7 @@ public class ClassInfoActivity extends Activity {
         super.onResume();
         requester.requestUpdateAll();
 
-        Schedule s = Schedule.getInstance();
+        ScheduleUtil s = ScheduleUtil.getInstance();
         Lecture l = s.getCurrentClass() != null ? s.getCurrentClass() : s.getNextClass();
 
         if (l == null) {
