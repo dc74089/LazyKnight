@@ -31,7 +31,7 @@ public class MySchedule {
     public static List<Lecture> freshmanSpring() {
         Lecture COP3502H = new Lecture("COP 3502H", "H Computer Science 1", "Sean Szumlanski", "ENG1 286",
                 9, 00, 10, 15, TUESDAY, THURSDAY);
-        Lecture COT3100H = new Lecture("COT 3100H", "H Intro to Discrete", "Staff", "ENG1 383",
+        Lecture COT3100H = new Lecture("COT 3100H", "H Intro to Discrete", "Wei Zhang", "ENG1 383",
                 9, 00, 10, 15, MONDAY, WEDNESDAY);
         Lecture EME2040 = new Lecture("EME 2040", "Intro to Tech for Ed", "Richard Thripp", "TA 303",
                 10, 30, 13, 20, MONDAY);
