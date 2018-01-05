@@ -31,7 +31,7 @@ public class MySchedule {
     }
 
     public static List<Lecture> freshmanSpring() {
-        Lecture COP3502H = new Lecture("COP 3502H", "H Computer Science 1", "Sean Szumlanski", "ENG1 286",
+        Lecture COP3502H = new Lecture("COP 3502H", "H Computer Science 1", "Sean Szumlanski", "BA1 209",
                 9, 00, 10, 15, TUESDAY, THURSDAY);
         Lecture COT3100H = new Lecture("COT 3100H", "H Intro to Discrete", "Wei Zhang", "ENG1 383",
                 9, 00, 10, 15, MONDAY, WEDNESDAY);
@@ -39,7 +39,7 @@ public class MySchedule {
                 10, 30, 13, 20, MONDAY);
         Lecture ENC1102H = new Lecture("ENC 1002H", "H Composition 2", "Kevin Roozen", "BHC 128",
                 12, 00, 13, 15, TUESDAY, THURSDAY);
-        Lecture COP3330 = new Lecture("COP 3330", "Intro to OOP", "Demetrios Glinos", "Online",
+        Lecture COP3330 = new Lecture("COP 3330", "Intro to OOP", "Michelle Farahbaksh", "Online",
                 00, 00, 00, 00);
 
         return Arrays.asList(COP3502H, COT3100H, EME2040, ENC1102H, COP3330);
