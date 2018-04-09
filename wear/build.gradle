@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
     defaultConfig {
         applicationId "com.vegetarianbaconite.lazyknight"
         minSdkVersion 25
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }
@@ -19,9 +19,9 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     //compile 'com.android.support:wear:26.0.0'
-    compile 'com.google.android.support:wearable:2.0.3'
-    provided 'com.google.android.wearable:wearable:2.0.3'
-    compile project(path: ':schedulelib')
+    implementation 'com.google.android.support:wearable:2.2.0'
+    compileOnly 'com.google.android.wearable:wearable:2.2.0'
+    implementation project(path: ':schedulelib')
 }
