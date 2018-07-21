@@ -48,15 +48,15 @@ public class MySchedule {
     public static List<Lecture> sophomoreFall() {
         Lecture BSC2010C = new Lecture("BSC 2010C", "Biology 1", "Pamela Thomas", "CB2 201",
                 12, 30, 13, 20, MONDAY, WEDNESDAY, FRIDAY);
-        Lecture BSC2010C_LAB = new Lecture("BSC 2010C", "Biology 1 Lab", "Karen Yeargain", "TBA",
+        Lecture BSC2010C_LAB = new Lecture("BSC 2010C", "Biology 1 Lab", "Elizabeth Perez", "TBA",
                 8, 30, 10, 20, THURSDAY);
-        Lecture CIS3360 = new Lecture("CIS 3360", "Security in Computing", "Demitrios Glinos", "Online",
+        Lecture CIS3360 = new Lecture("CIS 3360", "Security in Computing", "Staff", "Online",
                 00, 00, 00, 00);
-        Lecture COP3503 = new Lecture("COP 3503H", "H Computer Science 2", "Staff", "BHC 131",
+        Lecture COP3503 = new Lecture("COP 3503H", "H Computer Science 2", "Joseph Laviola", "BHC 131",
                 11, 30, 12, 20, MONDAY, WEDNESDAY, FRIDAY);
-        Lecture EDF2085 = new Lecture("EDF 20185", "Intro to Diversity", "Staff", "TA 221",
+        Lecture EDF2085 = new Lecture("EDF 20185", "Intro to Diversity", "Karen Biraimah", "TA 221",
                 13, 30, 16, 20, TUESDAY);
-        Lecture MUL2010 = new Lecture("MUL 2010", "Enjoyment of Music", "Robert Gennaro", "Online",
+        Lecture MUL2010 = new Lecture("MUL 2010", "Enjoyment of Music", "Joe Gennaro", "Online",
                 00, 00, 00, 00);
 
         return Arrays.asList(BSC2010C, BSC2010C_LAB, CIS3360, COP3503, EDF2085, MUL2010);
