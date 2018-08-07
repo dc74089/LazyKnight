@@ -13,7 +13,7 @@ public class MySchedule {
     public static List<List<Lecture>> availableSchedules = Arrays.asList(sophomoreFall(), freshmanSpring(), freshmanFall());
     public static List<String> scheduleNames = Arrays.asList("Fall 2018", "Spring 2018", "Fall 2017");
 
-    public static final List<Lecture> currentSemester = freshmanSpring();
+    public static final List<Lecture> currentSemester = sophomoreFall();
 
     public static List<Lecture> freshmanFall() {
         Lecture COP3223H = new Lecture("COP 3223H", "H Intro to Prog w/ C", "Glenn Martin", "ENG1 227",
