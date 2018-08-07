@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Lazy Knight</string>
     <string name="title_activity_class_info">Class Info</string>
+    <string name="title_activity_schedule_overview">Schedule</string>
 </resources>
