@@ -54,7 +54,7 @@ public class MySchedule {
                 00, 00, 00, 00);
         Lecture COP3503 = new Lecture("COP 3503H", "H Computer Science 2", "Joseph Laviola", "BHC 131",
                 11, 30, 12, 20, MONDAY, WEDNESDAY, FRIDAY);
-        Lecture EDF2085 = new Lecture("EDF 20185", "Intro to Diversity", "Karen Biraimah", "TA 221",
+        Lecture EDF2085 = new Lecture("EDF 2085", "Intro to Diversity", "Karen Biraimah", "TA 221",
                 13, 30, 16, 20, TUESDAY);
         Lecture MUL2010 = new Lecture("MUL 2010", "Enjoyment of Music", "Joe Gennaro", "Online",
                 00, 00, 00, 00);
