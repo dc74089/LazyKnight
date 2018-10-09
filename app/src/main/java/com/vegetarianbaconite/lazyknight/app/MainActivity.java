@@ -8,7 +8,10 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 
-import com.vegetarianbaconite.schedulelib.MySchedule;
+import com.vegetarianbaconite.schedulelib.Lecture;
+import com.vegetarianbaconite.schedulelib.Schedules;
+
+import java.util.List;
 
 public class MainActivity extends FragmentActivity {
     FragmentStatePagerAdapter adapter;
@@ -39,13 +42,37 @@ public class MainActivity extends FragmentActivity {
                 f.setArguments(args);
                 return f;
             } else {
-                return new NowFragment();
+                return new FriendNowFragment();
             }
         }
 
         @Override
         public int getCount() {
-            return MySchedule.availableSchedules.size() + 1;
+            return getSchedule().size() + 1;
         }
+    }
+
+    static List<List<Lecture>> getSchedule() {
+        switch (BuildConfig.FLAVOR) {
+            case "bacon":
+                return Schedules.baconSchedules;
+            case "dorm":
+                return Schedules.dormSchedules;
+            case "personal":
+                return Schedules.personalSchedules;
+        }
+        throw new RuntimeException("Invalid build flavor");
+    }
+
+    static List<String> getNames() {
+        switch (BuildConfig.FLAVOR) {
+            case "bacon":
+                return Schedules.baconNames;
+            case "dorm":
+                return Schedules.dormNames;
+            case "personal":
+                return Schedules.personalNames;
+        }
+        throw new RuntimeException("Invalid build flavor");
     }
 }

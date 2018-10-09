@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 
-import com.vegetarianbaconite.schedulelib.MySchedule;
+import com.vegetarianbaconite.schedulelib.Schedules;
 
 public class OverviewActivity extends FragmentActivity {
     FragmentStatePagerAdapter adapter;
@@ -40,7 +40,7 @@ public class OverviewActivity extends FragmentActivity {
 
         @Override
         public int getCount() {
-            return MySchedule.currentSemester.size();
+            return Schedules.currentSemester.size();
         }
     }
 }

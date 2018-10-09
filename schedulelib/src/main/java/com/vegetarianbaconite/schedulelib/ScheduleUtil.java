@@ -22,7 +22,11 @@ public class ScheduleUtil {
     }
 
     private ScheduleUtil() {
-        classes = MySchedule.currentSemester;
+        classes = Schedules.currentSemester;
+    }
+
+    public ScheduleUtil(List<Lecture> classes) {
+        this.classes = classes;
     }
 
     public Lecture getCurrentClass() {

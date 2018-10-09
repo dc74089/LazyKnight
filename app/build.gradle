@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion "27.0.3"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
         applicationId "com.vegetarianbaconite.lazyknight.app"
         minSdkVersion 21
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -25,11 +25,30 @@ android {
             minifyEnabled false
         }
     }
+
+    flavorDimensions "version"
+    productFlavors {
+        personal {
+            dimension "version"
+            applicationIdSuffix ".personal"
+            versionNameSuffix "-personal"
+        }
+        bacon {
+            dimension "version"
+            applicationIdSuffix ".bacon"
+            versionNameSuffix "-bacon"
+        }
+        dorm {
+            dimension "version"
+            applicationIdSuffix ".dorm"
+            versionNameSuffix "-dorm"
+        }
+    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support:support-vector-drawable:27.1.1'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-vector-drawable:28.0.0'
     implementation project(path: ':schedulelib')
 }

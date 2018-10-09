@@ -9,9 +9,17 @@ import static com.vegetarianbaconite.schedulelib.ScheduleUtil.ClassDay.THURSDAY;
 import static com.vegetarianbaconite.schedulelib.ScheduleUtil.ClassDay.TUESDAY;
 import static com.vegetarianbaconite.schedulelib.ScheduleUtil.ClassDay.WEDNESDAY;
 
-public class MySchedule {
-    public static List<List<Lecture>> availableSchedules = Arrays.asList(sophomoreFall(), sophomoreSpring(), freshmanSpring(), freshmanFall());
-    public static List<String> scheduleNames = Arrays.asList("Fall 2018", "Spring 2019", "Spring 2018", "Fall 2017");
+public class Schedules {
+    public static List<List<Lecture>> mySchedules = Arrays.asList(sophomoreFall(), sophomoreSpring(), freshmanSpring(), freshmanFall());
+    public static List<String> myScheduleNames = Arrays.asList("Fall 2018", "Spring 2019", "Spring 2018", "Fall 2017");
+
+
+    public static List<List<Lecture>> baconSchedules = Arrays.asList(sophomoreFall(), natFall2018(), ryanFall2018(), jenFall2018());
+    public static List<String> baconNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen");
+    public static List<List<Lecture>> dormSchedules = Arrays.asList(sophomoreFall());
+    public static List<String> dormNames = Arrays.asList("Dominic");
+    public static List<List<Lecture>> personalSchedules = Arrays.asList(sophomoreFall(), natFall2018(), ryanFall2018(), jenFall2018());
+    public static List<String> personalNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen");
 
     public static final List<Lecture> currentSemester = sophomoreFall();
 
@@ -58,8 +66,12 @@ public class MySchedule {
                 13, 30, 16, 20, TUESDAY);
         Lecture MUL2010 = new Lecture("MUL 2010", "Enjoyment of Music", "Joe Gennaro", "Online",
                 00, 00, 00, 00);
+        Lecture FLL = new Lecture("FLL", "FLL Team Practice", "", "Lake Highland",
+                15, 15, 17, 00, MONDAY, WEDNESDAY);
+        Lecture aftercare = new Lecture("AC", "Aftercare", "", "Lake Highland",
+                15, 15, 17, 00, FRIDAY);
 
-        return Arrays.asList(BSC2010C, BSC2010C_LAB, CIS3360, COP3503, EDF2085, MUL2010);
+        return Arrays.asList(BSC2010C, BSC2010C_LAB, CIS3360, COP3503, EDF2085, MUL2010, FLL, aftercare);
     }
 
     public static List<Lecture> sophomoreSpring() {
@@ -79,5 +91,51 @@ public class MySchedule {
                 10, 30, 11, 45, TUESDAY, THURSDAY);
 
         return Arrays.asList(CDA3013C, CDA3103C_LAB, COP4331, COP4331_LAB, COT4210, EDF4603, LIT3930H);
+    }
+
+    public static List<Lecture> jenFall2018() {
+        Lecture COP3223H = new Lecture("COP 3223H", "H Intro to C", "", "BHC 131",
+                13, 30, 11, 20, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture EGS1006 = new Lecture("EGS 1006", "Intro to Engineering", "", "CB2 101",
+                9, 30, 10, 20, FRIDAY);
+        Lecture EGS1006Lab = new Lecture("EGS 1006", "Intro to Engineering Lab", "", "ENG1 260",
+                13, 30, 14, 50, WEDNESDAY);
+        Lecture IDH1920H = new Lecture("IDH 1920H", "Honors Symposium", "", "NSC 101",
+                16, 30, 18, 50, MONDAY);
+        Lecture MAC2311H = new Lecture("MAC 2311H", "H Calculus 1", "", "MSB 121",
+                15, 30, 17, 20, TUESDAY, THURSDAY);
+        Lecture PEM2104 = new Lecture("PEM 2104", "Personal Fitness", "", "TA 322",
+                10, 30, 13, 20, TUESDAY);
+        return Arrays.asList(COP3223H, EGS1006, EGS1006Lab, IDH1920H, MAC2311H, PEM2104);
+    }
+
+    public static List<Lecture> natFall2018() {
+        Lecture COP3223H = new Lecture("COP 3223H", "H Intro to C", "", "BHC 131",
+                12, 30, 13, 20, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture MAC2313 = new Lecture("MAC 2313", "Calc 3", "", "MSB 121",
+                13, 30, 14, 10, MONDAY, WEDNESDAY, TUESDAY, THURSDAY);
+        Lecture EGS1006 = new Lecture("EGS 1006", "Intro to Engineering", "", "CB2 101",
+                10, 30, 11, 20, FRIDAY);
+        Lecture EGS1006Lab = new Lecture("EGS 1006", "Intro to Engineering Lab", "", "ENG1 260",
+                10, 00, 13, 20, THURSDAY);
+        Lecture IDH1920H = new Lecture("IDH 1920H", "Honors Symposium", "", "NSC 101",
+                16, 30, 18, 50, TUESDAY);
+        Lecture MUN3113 = new Lecture("MUN 3113", "Marching Band", "", "N/A",
+                18, 00, 20, 30, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture colorGuard = new Lecture("CG-Sec", "Colorguard Sectional", "", "N/A",
+                17, 00, 18, 00, MONDAY, WEDNESDAY);
+        return Arrays.asList(COP3223H, MAC2313, EGS1006, EGS1006Lab, IDH1920H, MUN3113, colorGuard);
+    }
+
+    public static List<Lecture> ryanFall2018() {
+        Lecture MAC2312 = new Lecture("MAC 2312", "Calc 2", "", "MSB 121",
+                9, 30, 10, 20, MONDAY, TUESDAY, WEDNESDAY, THURSDAY);
+        Lecture COP3223 = new Lecture("COP 3223C", "Intro to C", "", "CB1 104",
+                10, 30, 11, 20, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture AMH2010 = new Lecture("AMH 2010", "US History", "", "BA1 119",
+                11, 30, 12, 20);
+        Lecture BSC2010 = new Lecture("BSC 2010C", "Biology 1", "", "CB2 201",
+                12, 30, 13, 20, MONDAY, WEDNESDAY, FRIDAY);
+        return Arrays.asList(MAC2312, COP3223, AMH2010, BSC2010);
     }
 }

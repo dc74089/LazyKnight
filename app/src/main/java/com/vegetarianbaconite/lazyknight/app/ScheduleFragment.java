@@ -11,7 +11,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.vegetarianbaconite.schedulelib.Lecture;
-import com.vegetarianbaconite.schedulelib.MySchedule;
 
 import java.util.List;
 
@@ -25,9 +24,9 @@ public class ScheduleFragment extends Fragment {
         Log.d("Frag", "Fragment Created");
         Bundle args = getArguments();
         View root = inflater.inflate(R.layout.fragment_main, container, false);
-        List<Lecture> s = MySchedule.availableSchedules.get(args.getInt("position", 0));
+        List<Lecture> s = MainActivity.getSchedule().get(args.getInt("position", 0));
 
-        ((TextView) root.findViewById(R.id.fSemester)).setText(MySchedule.scheduleNames.
+        ((TextView) root.findViewById(R.id.fSemester)).setText(MainActivity.getNames().
                 get(args.getInt("position", 0)));
 
         ll = root.findViewById(R.id.fLinLay);

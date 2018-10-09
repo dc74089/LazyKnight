@@ -18,14 +18,12 @@ import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
 public class NowFragment extends Fragment implements View.OnClickListener {
+    final DateTimeFormatter df = DateTimeFormat.forPattern("E HH:mm");
     View root;
     TextView now, until;
-
     ScheduleUtil s;
     Lecture current;
     int state; //0 = blank, 1 = next, 2 = current
-
-    final DateTimeFormatter df = DateTimeFormat.forPattern("E HH:mm");
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

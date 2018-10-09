@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.vegetarianbaconite.schedulelib.Lecture;
-import com.vegetarianbaconite.schedulelib.MySchedule;
+import com.vegetarianbaconite.schedulelib.Schedules;
 
 public class WearScheduleFragment extends Fragment {
     LinearLayout ll;
@@ -22,7 +22,7 @@ public class WearScheduleFragment extends Fragment {
         View root = inflater.inflate(R.layout.activity_class_info, container, false);
 
         Bundle args = getArguments();
-        Lecture l = MySchedule.currentSemester.get(args.getInt("position", 0));
+        Lecture l = Schedules.currentSemester.get(args.getInt("position", 0));
 
         ll = root.findViewById(R.id.ciLinLay);
 
