@@ -12,12 +12,16 @@ import android.widget.TextView;
 import com.vegetarianbaconite.schedulelib.Lecture;
 import com.vegetarianbaconite.schedulelib.ScheduleUtil;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class FriendNowFragment extends Fragment {
     View root;
     List<List<Lecture>> scheduleList;
     List<String> nameList;
+    DateFormat df = new SimpleDateFormat("EEEE, k:m");
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,6 +35,8 @@ public class FriendNowFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         root = inflater.inflate(R.layout.fragment_friend_now, container, false);
         ViewGroup parentLayout = root.findViewById(R.id.fLinLay);
+
+        ((TextView) root.findViewById(R.id.fCurrentTime)).setText(df.format(new Date()));
 
         for (int i = 0; i < scheduleList.size(); i++) {
             View singleFriend = inflater.inflate(R.layout.component_friend, parentLayout, false);

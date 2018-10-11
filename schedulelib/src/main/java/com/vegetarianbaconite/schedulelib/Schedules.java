@@ -14,12 +14,12 @@ public class Schedules {
     public static List<String> myScheduleNames = Arrays.asList("Fall 2018", "Spring 2019", "Spring 2018", "Fall 2017");
 
 
-    public static List<List<Lecture>> baconSchedules = Arrays.asList(sophomoreFall(), natFall2018(), ryanFall2018(), jenFall2018());
-    public static List<String> baconNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen");
+    public static List<List<Lecture>> baconSchedules = Arrays.asList(sophomoreFall(), natFall2018(), ryanFall2018(), jenFall2018(), sebaFall2018());
+    public static List<String> baconNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba");
     public static List<List<Lecture>> dormSchedules = Arrays.asList(sophomoreFall());
     public static List<String> dormNames = Arrays.asList("Dominic");
-    public static List<List<Lecture>> personalSchedules = Arrays.asList(sophomoreFall(), natFall2018(), ryanFall2018(), jenFall2018());
-    public static List<String> personalNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen");
+    public static List<List<Lecture>> personalSchedules = Arrays.asList(sophomoreFall(), natFall2018(), ryanFall2018(), jenFall2018(), sebaFall2018());
+    public static List<String> personalNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba");
 
     public static final List<Lecture> currentSemester = sophomoreFall();
 
@@ -137,5 +137,21 @@ public class Schedules {
         Lecture BSC2010 = new Lecture("BSC 2010C", "Biology 1", "", "CB2 201",
                 12, 30, 13, 20, MONDAY, WEDNESDAY, FRIDAY);
         return Arrays.asList(MAC2312, COP3223, AMH2010, BSC2010);
+    }
+
+    public static List<Lecture> sebaFall2018() {
+        Lecture MAC2313 = new Lecture("MAC 2313", "Calc 2", "", "MSB 406",
+                7, 30, 8, 20, MONDAY, TUESDAY, WEDNESDAY, THURSDAY);
+        Lecture CHM2045 = new Lecture("CHM 2045C", "Chem 1", "", "CB2 106",
+                9, 30, 10, 20, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture CHM2045Disc = new Lecture("CHM 2045", "Chem 1 Discusion", "", "BA1 110",
+                15, 30, 16, 20, THURSDAY);
+        Lecture EGN3310 = new Lecture("EGN 3310", "Statics", "", "HPA1 119",
+                13, 30, 14, 45, MONDAY, WEDNESDAY);
+        Lecture EGS1006 = new Lecture("EGS 1006", "Intro to Engineering", "", "CB2 101",
+                8, 30, 9, 20, FRIDAY);
+        Lecture EGS1006Lab = new Lecture("EGS 1006", "Intro to Engineering Lab", "", "ENG1 260",
+                15, 00, 16, 20, TUESDAY);
+        return Arrays.asList(MAC2313, CHM2045, CHM2045Disc, EGN3310, EGS1006, EGS1006Lab);
     }
 }
