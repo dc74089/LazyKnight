@@ -117,7 +117,7 @@ public class Schedules {
         Lecture EGS1006 = new Lecture("EGS 1006", "Intro to Engineering", "", "CB2 101",
                 10, 30, 11, 20, FRIDAY);
         Lecture EGS1006Lab = new Lecture("EGS 1006", "Intro to Engineering Lab", "", "ENG1 260",
-                10, 00, 13, 20, THURSDAY);
+                12, 00, 13, 20, THURSDAY);
         Lecture IDH1920H = new Lecture("IDH 1920H", "Honors Symposium", "", "NSC 101",
                 16, 30, 18, 50, TUESDAY);
         Lecture MUN3113 = new Lecture("MUN 3113", "Marching Band", "", "N/A",
@@ -133,7 +133,7 @@ public class Schedules {
         Lecture COP3223 = new Lecture("COP 3223C", "Intro to C", "", "CB1 104",
                 10, 30, 11, 20, MONDAY, WEDNESDAY, FRIDAY);
         Lecture AMH2010 = new Lecture("AMH 2010", "US History", "", "BA1 119",
-                11, 30, 12, 20, MONDAY, WEDNESDAY, FRIDAY);
+                11, 30, 12, 20, MONDAY, WEDNESDAY);
         Lecture BSC2010 = new Lecture("BSC 2010C", "Biology 1", "", "CB2 201",
                 12, 30, 13, 20, MONDAY, WEDNESDAY, FRIDAY);
         return Arrays.asList(MAC2312, COP3223, AMH2010, BSC2010);
