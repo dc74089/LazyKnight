@@ -18,8 +18,8 @@ public class Schedules {
     public static List<String> baconNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba");
     public static List<List<Lecture>> dormSchedules = Arrays.asList(sophomoreFall());
     public static List<String> dormNames = Arrays.asList("Dominic");
-    public static List<List<Lecture>> personalSchedules = Arrays.asList(sophomoreFall(), natFall2018(), ryanFall2018(), jenFall2018(), sebaFall2018());
-    public static List<String> personalNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba");
+    public static List<List<Lecture>> personalSchedules = Arrays.asList(sophomoreFall(), sophomoreSpring(), natFall2018(), ryanFall2018(), jenFall2018(), sebaFall2018());
+    public static List<String> personalNames = Arrays.asList("Dominic", "Next Semester", "Natalie", "Ryan", "Jen", "Seba");
 
     public static final List<Lecture> currentSemester = sophomoreFall();
 
@@ -75,22 +75,26 @@ public class Schedules {
     }
 
     public static List<Lecture> sophomoreSpring() {
-        Lecture CDA3013C = new Lecture("CDA 3103C", "Logic & Organization", "TBA", "PSY 108",
+        Lecture CDA3013C = new Lecture("CDA 3103C", "Logic & Organization", "Sarah Angell", "PSY 108",
                 9, 00, 10, 15, TUESDAY, THURSDAY);
-        Lecture CDA3103C_LAB = new Lecture("CDA 3103C", "Logic & Organization Lab", "TBA", "HPA1 106",
+        Lecture CDA3103C_LAB = new Lecture("CDA 3103C", "Logic & Organization Lab", "Sarah Angell", "HPA1 106",
                 10, 30, 11, 20, FRIDAY);
-        Lecture COP4331 = new Lecture("COP 4331", "Proc. Object Oriented", "TBA", "ENG2 102",
+        Lecture COP4331 = new Lecture("COP 4331", "Proc. Object Oriented", "Richard Leinecker", "ENG2 102",
                 12, 00, 13, 15, MONDAY, WEDNESDAY);
-        Lecture COP4331_LAB = new Lecture("COP 4331", "Proc. Object Oriented Lab", "TBA", "CB1 309",
+        Lecture COP4331_LAB = new Lecture("COP 4331", "Proc. Object Oriented Lab", "Richard Leinecker", "CB1 309",
                 17, 00, 17, 50, TUESDAY);
         Lecture COT4210 = new Lecture("COT4210", "Discrete II", "TBA", "ENG2 102",
                 12, 00, 13, 15, TUESDAY, THURSDAY);
-        Lecture EDF4603 = new Lecture("EDF 4603", "Ethical, Legal, Safety", "TBA", "TA 202",
+        Lecture EDF4603 = new Lecture("EDF 4603", "Ethical, Legal, Safety", "Randall Hewitt", "TA 202",
                 13, 30, 16, 20, THURSDAY);
-        Lecture LIT3930H = new Lecture("LIT 3930H", "Harry Potter & Youth Culture", "William Pugh", "BHC 126",
-                10, 30, 11, 45, TUESDAY, THURSDAY);
+        Lecture EDF4467 = new Lecture("EDF 4467", "Learning Theory & Assessment", "Lindsey Jackson", "Online",
+                00, 00, 00, 00);
+        Lecture FLL = new Lecture("FLL", "FLL Team Practice", "", "Lake Highland",
+                15, 15, 17, 00, MONDAY, WEDNESDAY);
+        Lecture aftercare = new Lecture("AC", "Aftercare", "", "Lake Highland",
+                15, 15, 17, 00, FRIDAY);
 
-        return Arrays.asList(CDA3013C, CDA3103C_LAB, COP4331, COP4331_LAB, COT4210, EDF4603, LIT3930H);
+        return Arrays.asList(CDA3013C, CDA3103C_LAB, COP4331, COP4331_LAB, COT4210, EDF4603, EDF4467, FLL, aftercare);
     }
 
     public static List<Lecture> jenFall2018() {
@@ -153,5 +157,22 @@ public class Schedules {
         Lecture EGS1006Lab = new Lecture("EGS 1006", "Intro to Engineering Lab", "", "ENG1 260",
                 15, 00, 16, 20, TUESDAY);
         return Arrays.asList(MAC2313, CHM2045, CHM2045Disc, EGN3310, EGS1006, EGS1006Lab);
+    }
+
+    public static List<Lecture> ryanSpring2019() {
+        Lecture CDA3013C = new Lecture("CDA 3103C", "Logic & Organization", "Sarah Angell", "PSY 108",
+                9, 00, 10, 15, TUESDAY, THURSDAY);
+        Lecture CDA3103C_LAB = new Lecture("CDA 3103C", "Logic & Organization Lab", "Sarah Angell", "HPA1 106",
+                12, 30, 13, 20, FRIDAY);
+        Lecture COP3502C = new Lecture("COP 3502C", "Computer Science 1", "Sean Szumlanski", "CB1 121",
+                11, 30, 12, 20, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture COP3502C_LAB = new Lecture("COP 3502C", "Computer Science 1 Lab", "Sean Szumlanski", "ENG2 205",
+                14, 30, 15, 20, FRIDAY);
+        Lecture MAC2313 = new Lecture("MAC 2313", "Calculus 3", "TBA", "MSB 108",
+                12, 30, 13, 20, MONDAY, TUESDAY, WEDNESDAY, THURSDAY);
+        Lecture CIS3360 = new Lecture("CIS 3360", "Security in Computing", "TBA", "CB2 106",
+                13, 30, 14, 45, MONDAY, WEDNESDAY);
+
+        return Arrays.asList(CDA3013C, CDA3103C_LAB, COP3502C, COP3502C_LAB, MAC2313, CIS3360);
     }
 }
