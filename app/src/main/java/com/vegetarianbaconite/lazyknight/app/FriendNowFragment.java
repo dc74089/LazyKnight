@@ -21,7 +21,7 @@ public class FriendNowFragment extends Fragment {
     View root;
     List<List<Lecture>> scheduleList;
     List<String> nameList;
-    DateFormat df = new SimpleDateFormat("EEEE, k:m");
+    DateFormat df = new SimpleDateFormat("EEEE, kk:mm");
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
