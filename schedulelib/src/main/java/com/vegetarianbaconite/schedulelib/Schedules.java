@@ -14,15 +14,16 @@ public class Schedules {
     public static List<String> myScheduleNames = Arrays.asList("Fall 2018", "Spring 2019", "Spring 2018", "Fall 2017");
 
 
-    public static List<List<Lecture>> baconSchedules = Arrays.asList(sophomoreFall(), natFall2018(), ryanFall2018(), jenFall2018(), sebaFall2018(), sophomoreSpring(), natSpring2019(), ryanSpring2019(), sebaSpring2019());
-    public static List<String> baconNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba", "Dominic Spring", "Natalie Spring", "Ryan Spring", "Seba Spring");
+    public static List<List<Lecture>> baconSchedules = Arrays.asList(sophomoreFall(), natSpring2019(), ryanSpring2019(), jenFall2018(), sebaSpring2019());
+    public static List<String> baconNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba");
     public static List<List<Lecture>> dormSchedules = Arrays.asList(stevenSpring2019(), winstonSpring2019(), sophomoreSpring(), andrewSpring2019());
     public static List<String> dormNames = Arrays.asList("Steven", "Winston", "Dominic", "Andrew");
-    public static List<List<Lecture>> personalSchedules = Arrays.asList(sophomoreFall(), sophomoreSpring(), natFall2018(), ryanFall2018(), jenFall2018(), sebaFall2018(), stevenSpring2019(), andrewSpring2019(), winstonSpring2019());
-    public static List<String> personalNames = Arrays.asList("Dominic", "Next Semester", "Natalie", "Ryan", "Jen", "Seba", "Steven", "Andrew", "Winston");
+    public static List<List<Lecture>> personalSchedules = Arrays.asList(sophomoreSpring(), natSpring2019(), ryanSpring2019(), jenFall2018(), sebaSpring2019(), stevenSpring2019(), andrewSpring2019(), winstonSpring2019());
+    public static List<String> personalNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba", "Steven", "Andrew", "Winston");
 
-    public static final List<Lecture> currentSemester = sophomoreFall();
+    public static final List<Lecture> currentSemester = sophomoreSpring();
 
+    /* Mine */
     public static List<Lecture> freshmanFall() {
         Lecture COP3223H = new Lecture("COP 3223H", "H Intro to Prog w/ C", "Glenn Martin", "ENG1 227",
                 9, 30, 10, 20, MONDAY, WEDNESDAY, FRIDAY);
@@ -89,14 +90,17 @@ public class Schedules {
                 13, 30, 16, 20, THURSDAY);
         Lecture EDF4467 = new Lecture("EDF 4467", "Learning Theory & Assessment", "Lindsey Jackson", "Online",
                 00, 00, 00, 00);
+        Lecture RED4043 = new Lecture("RED 4043", "Content Reading K-12", "Tammy Stafford", "Online",
+                00, 00, 00, 00);
         Lecture FLL = new Lecture("FLL", "FLL Team Practice", "", "Lake Highland",
                 15, 15, 17, 00, MONDAY, WEDNESDAY);
         Lecture aftercare = new Lecture("AC", "Aftercare", "", "Lake Highland",
                 15, 15, 17, 00, FRIDAY);
 
-        return Arrays.asList(CDA3013C, CDA3103C_LAB, COP4331, COP4331_LAB, COT4210, EDF4603, EDF4467, FLL, aftercare);
+        return Arrays.asList(CDA3013C, CDA3103C_LAB, COP4331, COP4331_LAB, COT4210, EDF4603, EDF4467, RED4043, FLL, aftercare);
     }
 
+    /* Fall 2018 */
     public static List<Lecture> jenFall2018() {
         Lecture COP3223H = new Lecture("COP 3223H", "H Intro to C", "", "BHC 131",
                 10, 30, 11, 20, MONDAY, WEDNESDAY, FRIDAY);
@@ -159,6 +163,7 @@ public class Schedules {
         return Arrays.asList(MAC2313, CHM2045, CHM2045Disc, EGN3310, EGS1006, EGS1006Lab);
     }
 
+    /* Spring 2019 */
     public static List<Lecture> natSpring2019() {
         Lecture EGN3211 = new Lecture("EGN 3211", "Engineering Analysis", "TBA", "ENG2 302",
                 12, 00, 13, 15, MONDAY, WEDNESDAY);
@@ -172,25 +177,31 @@ public class Schedules {
                 15, 30, 16, 50, WEDNESDAY);
         Lecture EGN1007_LAB = new Lecture("EGN 1007", "Intro to Engineering Lab", "TBA", "CB2 201",
                 10, 30, 11, 20);
+        Lecture CHM2045C = new Lecture("CHM 2045C", "Chemistry 1", "", "CSB 101",
+                12, 30, 13, 20, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture CHM2045C_LAB = new Lecture("CHM 2045C", "Chemistry 1 Lav", "", "PSY 106",
+                12, 30, 13, 20, TUESDAY);
 
-        return Arrays.asList(EGN3211, PHY3101, MAP2302H, SPC1603H, EGN1007, EGN1007_LAB);
+        return Arrays.asList(EGN3211, PHY3101, MAP2302H, SPC1603H, EGN1007, EGN1007_LAB, CHM2045C, CHM2045C_LAB);
     }
 
     public static List<Lecture> ryanSpring2019() {
-        Lecture CDA3013C = new Lecture("CDA 3103C", "Logic & Organization", "Sarah Angell", "PSY 108",
-                9, 00, 10, 15, TUESDAY, THURSDAY);
-        Lecture CDA3103C_LAB = new Lecture("CDA 3103C", "Logic & Organization Lab", "Sarah Angell", "HPA1 106",
-                12, 30, 13, 20, FRIDAY);
         Lecture COP3502C = new Lecture("COP 3502C", "Computer Science 1", "Sean Szumlanski", "CB1 121",
                 11, 30, 12, 20, MONDAY, WEDNESDAY, FRIDAY);
         Lecture COP3502C_LAB = new Lecture("COP 3502C", "Computer Science 1 Lab", "Sean Szumlanski", "ENG2 205",
                 14, 30, 15, 20, FRIDAY);
-        Lecture MAC2313 = new Lecture("MAC 2313", "Calculus 3", "TBA", "MSB 108",
-                12, 30, 13, 20, MONDAY, TUESDAY, WEDNESDAY, THURSDAY);
         Lecture CIS3360 = new Lecture("CIS 3360", "Security in Computing", "TBA", "CB2 106",
                 13, 30, 14, 45, MONDAY, WEDNESDAY);
+        Lecture COT3100 = new Lecture("COT 3100", "Intro to Discrete", "", "CB2 101",
+                15, 00, 16, 15, TUESDAY, THURSDAY);
+        Lecture COT3100_LAB = new Lecture("COT 3100", "Intro to Discrete Lab", "", "CB2 109",
+                15, 30, 16, 20, FRIDAY);
+        Lecture CHM2045C = new Lecture("CHM 2045C", "Chemistry 1", "", "CSB 101",
+                12, 30, 13, 20, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture CHM2045C_LAB = new Lecture("CHM 2045C", "Chemistry 1 Lav", "", "PSY 106",
+                12, 30, 13, 20, TUESDAY);
 
-        return Arrays.asList(CDA3013C, CDA3103C_LAB, COP3502C, COP3502C_LAB, MAC2313, CIS3360);
+        return Arrays.asList(COP3502C, COP3502C_LAB, CIS3360, COT3100, COT3100_LAB, CHM2045C, CHM2045C_LAB);
     }
 
     public static List<Lecture> sebaSpring2019() {
