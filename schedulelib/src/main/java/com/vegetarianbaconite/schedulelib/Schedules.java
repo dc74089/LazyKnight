@@ -14,7 +14,7 @@ public class Schedules {
     public static List<String> myScheduleNames = Arrays.asList("Fall 2018", "Spring 2019", "Spring 2018", "Fall 2017");
 
 
-    public static List<List<Lecture>> baconSchedules = Arrays.asList(sophomoreFall(), natSpring2019(), ryanSpring2019(), jenSpring2019(), sebaSpring2019(), alexisSpring2019());
+    public static List<List<Lecture>> baconSchedules = Arrays.asList(sophomoreSpring(), natSpring2019(), ryanSpring2019(), jenSpring2019(), sebaSpring2019(), alexisSpring2019());
     public static List<String> baconNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba", "Alexis");
     public static List<List<Lecture>> dormSchedules = Arrays.asList(stevenSpring2019(), winstonSpring2019(), sophomoreSpring(), andrewSpring2019());
     public static List<String> dormNames = Arrays.asList("Steven", "Winston", "Dominic", "Andrew");
@@ -186,8 +186,6 @@ public class Schedules {
     public static List<Lecture> natSpring2019() {
         Lecture EGN3211 = new Lecture("EGN 3211", "Engineering Analysis", "TBA", "ENG2 302",
                 12, 00, 13, 15, MONDAY, WEDNESDAY);
-        Lecture PHY3101 = new Lecture("PHY 3101", "Physics 3", "Elena Flitsiyan", "MSB 305",
-                11, 00, 12, 20, TUESDAY, THURSDAY);
         Lecture MAP2302H = new Lecture("MAP 2302H", "Honors Differential Equations", "TBA", "MSB 121",
                 13, 30, 14, 50, TUESDAY, THURSDAY);
         Lecture SPC1603H = new Lecture("SPC 1603H", "Honors Technical Presentations", "Regina Francies", "BHC",
@@ -198,10 +196,10 @@ public class Schedules {
                 10, 30, 11, 20);
         Lecture CHM2045C = new Lecture("CHM 2045C", "Chemistry 1", "", "CSB 101",
                 12, 30, 13, 20, MONDAY, WEDNESDAY, FRIDAY);
-        Lecture CHM2045C_LAB = new Lecture("CHM 2045C", "Chemistry 1 Lav", "", "PSY 106",
+        Lecture CHM2045C_LAB = new Lecture("CHM 2045C", "Chemistry 1 Lab", "", "PSY 106",
                 12, 30, 13, 20, TUESDAY);
 
-        return Arrays.asList(EGN3211, PHY3101, MAP2302H, SPC1603H, EGN1007, EGN1007_LAB, CHM2045C, CHM2045C_LAB);
+        return Arrays.asList(EGN3211, MAP2302H, SPC1603H, EGN1007, EGN1007_LAB, CHM2045C, CHM2045C_LAB);
     }
 
     public static List<Lecture> ryanSpring2019() {
