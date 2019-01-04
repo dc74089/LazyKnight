@@ -14,12 +14,12 @@ public class Schedules {
     public static List<String> myScheduleNames = Arrays.asList("Fall 2018", "Spring 2019", "Spring 2018", "Fall 2017");
 
 
-    public static List<List<Lecture>> baconSchedules = Arrays.asList(sophomoreFall(), natSpring2019(), ryanSpring2019(), jenFall2018(), sebaSpring2019());
-    public static List<String> baconNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba");
+    public static List<List<Lecture>> baconSchedules = Arrays.asList(sophomoreFall(), natSpring2019(), ryanSpring2019(), jenSpring2019(), sebaSpring2019(), alexisSpring2019());
+    public static List<String> baconNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba", "Alexis");
     public static List<List<Lecture>> dormSchedules = Arrays.asList(stevenSpring2019(), winstonSpring2019(), sophomoreSpring(), andrewSpring2019());
     public static List<String> dormNames = Arrays.asList("Steven", "Winston", "Dominic", "Andrew");
-    public static List<List<Lecture>> personalSchedules = Arrays.asList(sophomoreSpring(), natSpring2019(), ryanSpring2019(), jenFall2018(), sebaSpring2019(), stevenSpring2019(), andrewSpring2019(), winstonSpring2019());
-    public static List<String> personalNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba", "Steven", "Andrew", "Winston");
+    public static List<List<Lecture>> personalSchedules = Arrays.asList(sophomoreSpring(), natSpring2019(), ryanSpring2019(), jenSpring2019(), sebaSpring2019(), alexisSpring2019(), stevenSpring2019(), andrewSpring2019(), winstonSpring2019());
+    public static List<String> personalNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba", "Alexis", "Steven", "Andrew", "Winston");
 
     public static final List<Lecture> currentSemester = sophomoreSpring();
 
@@ -164,6 +164,25 @@ public class Schedules {
     }
 
     /* Spring 2019 */
+    public static List<Lecture> jenSpring2019() {
+        Lecture COP3502H = new Lecture("COP 3502H", "Honors CS 1", "", "HEC 110",
+                13, 30, 14, 35, MONDAY, WEDNESDAY);
+        Lecture COT3100 = new Lecture("COT 3100", "Intro to Discrete", "", "ENG1 383",
+                13, 30, 14, 45, TUESDAY, THURSDAY);
+        Lecture EGN1007 = new Lecture("EGN 1007", "Engineering Concepts", "", "CB2 201",
+                9, 30, 10, 20, FRIDAY);
+        Lecture EGN1007_LAB = new Lecture("EGN 1007", "Engineering Concepts Lab", "", "ENG1 260",
+                10, 30, 11, 50, FRIDAY);
+        Lecture MAC2312H = new Lecture("MAC 2312H", "Honors Calc 2", "", "MSB 121",
+                9, 00, 10, 50, MONDAY, WEDNESDAY);
+        Lecture PHY2048 = new Lecture("PHY 2048C", "Physics 1", "", "MSB 260",
+                12, 30, 13, 20, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture PHY2048_LAB = new Lecture("PHY 2048C", "Physics 1 Lab", "", "MSB 339",
+                7, 30, 10, 20, THURSDAY);
+
+        return Arrays.asList(COP3502H, COT3100, EGN1007, EGN1007_LAB, MAC2312H, PHY2048, PHY2048_LAB);
+    }
+
     public static List<Lecture> natSpring2019() {
         Lecture EGN3211 = new Lecture("EGN 3211", "Engineering Analysis", "TBA", "ENG2 302",
                 12, 00, 13, 15, MONDAY, WEDNESDAY);
@@ -223,6 +242,15 @@ public class Schedules {
                 8, 30, 9, 20);
 
         return Arrays.asList(CHM2046, MAP2302, EGN3343, MHF3302, COP3502, COP3502_LAB, EGN1007, EGN1007_LAB);
+    }
+
+    public static List<Lecture> alexisSpring2019() {
+        Lecture EGN3365 = new Lecture("EGN 3365", "Properties of Materials", "", "ENG2 102",
+                10, 30, 11, 45, MONDAY, WEDNESDAY);
+        Lecture STA3032 = new Lecture("STA 3032", "Statistics for Engineers", "", "Online",
+                0, 0, 0, 0);
+
+        return Arrays.asList(EGN3365, STA3032);
     }
 
     public static List<Lecture> winstonSpring2019() {
