@@ -3,6 +3,7 @@ package com.vegetarianbaconite.lazyknight.app;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,12 +12,17 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.vegetarianbaconite.schedulelib.Lecture;
+import com.vegetarianbaconite.schedulelib.ScheduleUtil;
+
+import org.joda.time.LocalTime;
 
 import java.util.List;
 
 public class ScheduleFragment extends Fragment {
     LinearLayout ll;
     LayoutInflater llInflater;
+    ScheduleUtil util;
+    String timePattern;
 
     @Nullable
     @Override
@@ -31,6 +37,9 @@ public class ScheduleFragment extends Fragment {
 
         ll = root.findViewById(R.id.fLinLay);
         llInflater = getLayoutInflater();
+
+        util = new ScheduleUtil(s);
+        timePattern = DateFormat.is24HourFormat(getContext()) ? "HH:mm" : "KK:mm a";
 
         for (Lecture l : s)
             inflateForLecture(l);
@@ -49,8 +58,12 @@ public class ScheduleFragment extends Fragment {
         ((TextView) component.findViewById(R.id.sRoom)).setText(l.getRoom());
 
         ((TextView) component.findViewById(R.id.sDays)).setText(l.getDayString());
-        ((TextView) component.findViewById(R.id.sStart)).setText(l.getStartString());
-        ((TextView) component.findViewById(R.id.sEnd)).setText(l.getEndString());
+
+        LocalTime start = l.getStart();
+        LocalTime end = l.getEnd();
+
+        ((TextView) component.findViewById(R.id.sStart)).setText(start.toString(timePattern));
+        ((TextView) component.findViewById(R.id.sEnd)).setText(end.toString(timePattern));
 
         ll.addView(component);
     }

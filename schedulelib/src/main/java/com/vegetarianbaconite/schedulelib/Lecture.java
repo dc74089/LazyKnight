@@ -13,6 +13,7 @@ public class Lecture {
     String shortName, className, professor, room;
     String startString, endString;
     String dayString = "";
+    LocalTime startTime, endTime;
     private Map<ScheduleUtil.ClassDay, LocalTime> start = new HashMap<>();
     private Map<ScheduleUtil.ClassDay, LocalTime> end = new HashMap<>();
 
@@ -28,11 +29,14 @@ public class Lecture {
         startString = String.format("%d:%02d", startHour, startMinute);
         endString = String.format("%d:%02d", endHour, endMinute);
 
+        startTime = new LocalTime(startHour, startMinute);
+        endTime = new LocalTime(endHour, endMinute);
+
         setDayString(days);
 
         for (ScheduleUtil.ClassDay day : days) {
-            start.put(day, new LocalTime(startHour, startMinute));
-            end.put(day, new LocalTime(endHour, endMinute));
+            start.put(day, startTime);
+            end.put(day, endTime);
         }
     }
 
@@ -60,9 +64,17 @@ public class Lecture {
         return null;
     }
 
+    public LocalTime getStart() {
+        return startTime;
+    }
+
     public LocalTime getEnd(ScheduleUtil.ClassDay day) {
         if (end.containsKey(day)) return end.get(day);
         return null;
+    }
+
+    public LocalTime getEnd() {
+        return endTime;
     }
 
     public String getShortName() {
@@ -97,6 +109,7 @@ public class Lecture {
         this.room = room;
     }
 
+    @Deprecated
     public String getStartString() {
         return startString;
     }
@@ -105,6 +118,7 @@ public class Lecture {
         this.startString = startString;
     }
 
+    @Deprecated
     public String getEndString() {
         return endString;
     }

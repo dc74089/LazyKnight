@@ -18,8 +18,8 @@ public class Schedules {
     public static List<String> baconNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba", "Alexis");
     public static List<List<Lecture>> dormSchedules = Arrays.asList(stevenSpring2019(), winstonSpring2019(), sophomoreSpring(), andrewSpring2019());
     public static List<String> dormNames = Arrays.asList("Steven", "Winston", "Dominic", "Andrew");
-    public static List<List<Lecture>> personalSchedules = Arrays.asList(sophomoreSpring(), natSpring2019(), ryanSpring2019(), jenSpring2019(), sebaSpring2019(), alexisSpring2019(), stevenSpring2019(), andrewSpring2019(), winstonSpring2019());
-    public static List<String> personalNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba", "Alexis", "Steven", "Andrew", "Winston");
+    public static List<List<Lecture>> personalSchedules = Arrays.asList(sophomoreSpring(), natSpring2019(), ryanSpring2019(), jenSpring2019(), sebaSpring2019(), alexisSpring2019(), stevenSpring2019(), winstonSpring2019(), andrewSpring2019());
+    public static List<String> personalNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba", "Alexis", "Steven", "Winston", "Andrew");
 
     public static final List<Lecture> currentSemester = sophomoreSpring();
 
@@ -176,7 +176,7 @@ public class Schedules {
         Lecture PHY2048_LAB = new Lecture("PHY 2048C", "Physics 1 Lab", "", "MSB 339",
                 7, 30, 10, 20, THURSDAY);
 
-        return Arrays.asList(COP3502H, COT3100, EGN1007, EGN1007_LAB, MAC2312H, PHY2048, PHY2048_LAB);
+        return Arrays.asList(COP3502H, COT3100, MAC2312H, PHY2048, PHY2048_LAB);
     }
 
     public static List<Lecture> natSpring2019() {
@@ -222,7 +222,7 @@ public class Schedules {
                 9, 30, 10, 20, MONDAY, WEDNESDAY, FRIDAY);
         Lecture MAP2302 = new Lecture("MAP 2302", "Ordinary Diff Eq", "TBA", "MSB 121",
                 9, 00, 10, 20, TUESDAY, THURSDAY);
-        Lecture COP3502 = new Lecture("EGN 3343", "Thermodynamics", "TBA", "HEC 125",
+        Lecture EGN3343 = new Lecture("EGN 3343", "Thermodynamics", "TBA", "HEC 125",
                 10, 30, 11, 20, MONDAY, WEDNESDAY, FRIDAY);
         Lecture COP3502 = new Lecture("COP 3502", "Computer Science 1", "TBA", "ENG2 205",
                 11, 30, 12, 20, MONDAY, WEDNESDAY, FRIDAY);
@@ -235,7 +235,7 @@ public class Schedules {
         Lecture EGN1007_LAB = new Lecture("EGN 1007", "Intro to Engineering Lab", "TBA", "ENG1 260",
                 8, 30, 9, 20);
 
-        return Arrays.asList(CHM2046, MAP2302, COP3502, COP3502_LAB, COT3100, EGN1007, EGN1007_LAB);
+        return Arrays.asList(CHM2046, MAP2302, EGN3343, EGN1007, EGN1007_LAB, COP3502, COP3502_LAB, COT3100);
     }
 
     public static List<Lecture> alexisSpring2019() {
@@ -248,16 +248,14 @@ public class Schedules {
     }
 
     public static List<Lecture> winstonSpring2019() {
-        Lecture CHM2211 = new Lecture("CHM 2211", "Organic Chem 2", "TBA", "CB2 106",
-                10, 30, 11, 20, MONDAY, WEDNESDAY, FRIDAY);
-        Lecture CHM2211_LAB = new Lecture("CHM 2211", "Organic Chem 2 Lab", "TBA", "CB1 104",
-                12, 30, 13, 20, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture CHM2211 = new Lecture("CHM 2211", "Organic Chem 2", "TBA", "CB2 206",
+                9, 30, 10, 20, MONDAY, WEDNESDAY, FRIDAY);
         Lecture CHM2211L = new Lecture("CHM 2211", "Organic Lab Techniques", "TBA", "CHEM 202",
                 13, 30, 16, 20, MONDAY);
         Lecture CHM2211L2 = new Lecture("CHM 2211", "Organic Lab Techniques", "TBA", "BA1 119",
                 14, 00, 14, 50, FRIDAY);
-        Lecture MAC2313 = new Lecture("MAC 2313", "Calculus 3", "TBA", "MSB 407",
-                8, 30, 9, 20, MONDAY, TUESDAY, WEDNESDAY, THURSDAY);
+        Lecture MAC2313 = new Lecture("MAC 2313", "Calculus 3", "TBA", "MSB 108",
+                7, 30, 8, 20, MONDAY, TUESDAY, WEDNESDAY, THURSDAY);
         Lecture PCB3063 = new Lecture("PCB 3603", "Genetics", "TBA", "CB2 101",
                 11, 30, 12, 20, MONDAY, WEDNESDAY, FRIDAY);
         Lecture PHY2049 = new Lecture("PHY 2049", "Physics 2 Honors", "TBA", "BA1 115",
@@ -265,7 +263,7 @@ public class Schedules {
         Lecture PHY2049_LAB = new Lecture("PHY 2049", "Physics 2 Honors Lab", "TBA", "MSB 338",
                 16, 30, 19, 20, THURSDAY);
 
-        return Arrays.asList(CHM2211, CHM2211_LAB, CHM2211L, CHM2211L2, MAC2313, PCB3063, PHY2049, PHY2049_LAB);
+        return Arrays.asList(CHM2211, CHM2211L, CHM2211L2, MAC2313, PCB3063, PHY2049, PHY2049_LAB);
     }
 
     public static List<Lecture> andrewSpring2019() {
