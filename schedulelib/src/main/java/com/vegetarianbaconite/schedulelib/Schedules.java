@@ -169,10 +169,6 @@ public class Schedules {
                 13, 30, 14, 35, MONDAY, WEDNESDAY);
         Lecture COT3100 = new Lecture("COT 3100", "Intro to Discrete", "", "ENG1 383",
                 13, 30, 14, 45, TUESDAY, THURSDAY);
-        Lecture EGN1007 = new Lecture("EGN 1007", "Engineering Concepts", "", "CB2 201",
-                9, 30, 10, 20, FRIDAY);
-        Lecture EGN1007_LAB = new Lecture("EGN 1007", "Engineering Concepts Lab", "", "ENG1 260",
-                10, 30, 11, 50, FRIDAY);
         Lecture MAC2312H = new Lecture("MAC 2312H", "Honors Calc 2", "", "MSB 121",
                 9, 00, 10, 50, MONDAY, WEDNESDAY);
         Lecture PHY2048 = new Lecture("PHY 2048C", "Physics 1", "", "MSB 260",
@@ -215,31 +211,31 @@ public class Schedules {
                 15, 30, 16, 20, FRIDAY);
         Lecture CHM2045C = new Lecture("CHM 2045C", "Chemistry 1", "", "CSB 101",
                 12, 30, 13, 20, MONDAY, WEDNESDAY, FRIDAY);
-        Lecture CHM2045C_LAB = new Lecture("CHM 2045C", "Chemistry 1 Lav", "", "PSY 106",
+        Lecture CHM2045C_LAB = new Lecture("CHM 2045C", "Chemistry 1 Lab", "", "PSY 106",
                 12, 30, 13, 20, TUESDAY);
 
         return Arrays.asList(COP3502C, COP3502C_LAB, CIS3360, COT3100, COT3100_LAB, CHM2045C, CHM2045C_LAB);
     }
 
     public static List<Lecture> sebaSpring2019() {
-        Lecture CHM2046 = new Lecture("CHM 2046", "Chemistry 2", "TBA", "",
+        Lecture CHM2046 = new Lecture("CHM 2046", "Chemistry 2", "TBA", "VAB 132",
                 9, 30, 10, 20, MONDAY, WEDNESDAY, FRIDAY);
-        Lecture MAP2302 = new Lecture("MAP 2302", "", "TBA", "",
+        Lecture MAP2302 = new Lecture("MAP 2302", "Ordinary Diff Eq", "TBA", "MSB 121",
                 9, 00, 10, 20, TUESDAY, THURSDAY);
-        Lecture EGN3343 = new Lecture("EGN 3343", "", "TBA", "",
+        Lecture COP3502 = new Lecture("EGN 3343", "Thermodynamics", "TBA", "HEC 125",
                 10, 30, 11, 20, MONDAY, WEDNESDAY, FRIDAY);
-        Lecture MHF3302 = new Lecture("MHF 3302", "", "TBA", "",
-                10, 30, 11, 50, TUESDAY, THURSDAY);
-        Lecture COP3502 = new Lecture("COP 3502", "Computer Science 1", "TBA", "",
+        Lecture COP3502 = new Lecture("COP 3502", "Computer Science 1", "TBA", "ENG2 205",
                 11, 30, 12, 20, MONDAY, WEDNESDAY, FRIDAY);
         Lecture COP3502_LAB = new Lecture("COP 2502", "Computer Science 1 Lab", "TBA", "",
                 14, 30, 15, 20, FRIDAY);
-        Lecture EGN1007 = new Lecture("EGN 1007", "Intro to Engineering", "Jacqueline Sullivan", "",
+        Lecture COT3100 = new Lecture("COT 3100H", "H Intro to Discrete", "TBA", "ENG1 383",
+                13, 30, 14, 45, TUESDAY, THURSDAY);
+        Lecture EGN1007 = new Lecture("EGN 1007", "Intro to Engineering", "Jacqueline Sullivan", "CB2 201",
                 13, 30, 14, 50, WEDNESDAY);
-        Lecture EGN1007_LAB = new Lecture("EGN 1007", "Intro to Engineering Lab", "TBA", "",
+        Lecture EGN1007_LAB = new Lecture("EGN 1007", "Intro to Engineering Lab", "TBA", "ENG1 260",
                 8, 30, 9, 20);
 
-        return Arrays.asList(CHM2046, MAP2302, EGN3343, MHF3302, COP3502, COP3502_LAB, EGN1007, EGN1007_LAB);
+        return Arrays.asList(CHM2046, MAP2302, COP3502, COP3502_LAB, COT3100, EGN1007, EGN1007_LAB);
     }
 
     public static List<Lecture> alexisSpring2019() {
