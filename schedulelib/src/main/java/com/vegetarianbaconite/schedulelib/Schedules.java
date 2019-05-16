@@ -1,5 +1,7 @@
 package com.vegetarianbaconite.schedulelib;
 
+import java.nio.file.AtomicMoveNotSupportedException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,8 +15,9 @@ public class Schedules {
     public static List<List<Lecture>> mySchedules = Arrays.asList(sophomoreFall(), sophomoreSpring(), freshmanSpring(), freshmanFall());
     public static List<String> myScheduleNames = Arrays.asList("Fall 2018", "Spring 2019", "Spring 2018", "Fall 2017");
 
+    public static final List<Lecture> nullSchedule = new ArrayList<>();
 
-    public static List<List<Lecture>> baconSchedules = Arrays.asList(sophomoreSpring(), natSpring2019(), ryanSpring2019(), jenSpring2019(), sebaSpring2019(), alexisSpring2019());
+    public static List<List<Lecture>> baconSchedules = Arrays.asList(nullSchedule, natSummer2019(), ryanSummer2019(), jenSummer2019(), nullSchedule, nullSchedule);
     public static List<String> baconNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba", "Alexis");
     public static List<List<Lecture>> dormSchedules = Arrays.asList(stevenSpring2019(), winstonSpring2019(), sophomoreSpring(), andrewSpring2019());
     public static List<String> dormNames = Arrays.asList("Steven", "Winston", "Dominic", "Andrew");
@@ -295,4 +298,30 @@ public class Schedules {
 
         return Arrays.asList(CHM2210, MAC1140, PCB3063, PHY2054, PHY2054_LAB);
     }
+
+    public static List<Lecture> jenSummer2019() {
+        Lecture MAS3105 = new Lecture("MAS 3105", "Matrix and Linear", "", "MSB 121",
+                9, 00, 10, 50, MONDAY, TUESDAY, WEDNESDAY, THURSDAY);
+
+        return Arrays.asList(MAS3105);
+    }
+
+    public static List<Lecture> natSummer2019() {
+        Lecture JPN1120C = new Lecture("JPN 1120C", "Elementary Japanese", "", "NSC 112",
+                10, 00, 11, 50, MONDAY, WEDNESDAY);
+
+        return Arrays.asList(JPN1120C);
+    }
+
+    public static List<Lecture> ryanSummer2019() {
+        Lecture CDA3103C = new Lecture("CDA 3103C", "Computer Logic & Org", "", "HPA1 119",
+                14, 00, 15, 50, MONDAY, WEDNESDAY);
+        Lecture CDA3103C_LAB = new Lecture("CDA 3103C", "Computer Logic & Org Lab", "", "BA1 122",
+                16, 00, 16, 50, WEDNESDAY);
+        Lecture COT3100C = new Lecture("COT 3100C", "Intro to Discrete", "", "CB1 121",
+                14, 00, 15, 50, TUESDAY, THURSDAY);
+
+        return Arrays.asList(CDA3103C, CDA3103C_LAB, COT3100C);
+    }
+
 }
