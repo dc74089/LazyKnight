@@ -1,6 +1,5 @@
 package com.vegetarianbaconite.schedulelib;
 
-import java.nio.file.AtomicMoveNotSupportedException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -324,4 +323,40 @@ public class Schedules {
         return Arrays.asList(CDA3103C, CDA3103C_LAB, COT3100C);
     }
 
+    /* Fall 2019 */
+    public static List<Lecture> jenFall2019() {
+        Lecture MAS3106 = new Lecture("MAS 3106", "Linear Algebra", "", "MSB 109",
+                7, 30, 9, 20, TUESDAY, THURSDAY);
+        Lecture PHY2049 = new Lecture("PHY 2049", "Physics 2", "", "ENG1 227",
+                11, 30, 12, 12, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture PHY2049_LAB = new Lecture("PHY 2049", "Physics 2 Lab", "", "MSB 338",
+                7, 30, 10, 20, FRIDAY);
+        Lecture COP3330 = new Lecture("COP 3330", "OOP", "", "CB1 104",
+                12, 30, 13, 20, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture MAC2313 = new Lecture("MAC 2313", "Calculus 3", "", "MSB 407",
+                16, 30, 18, 20, MONDAY, WEDNESDAY);
+
+        return Arrays.asList(MAS3106, PHY2049, PHY2049_LAB, COP3330, MAC2313);
+    }
+
+    public static List<Lecture> natFall2019() {
+        return new ArrayList<>();
+    }
+
+    public static List<Lecture> ryanFall2019() {
+        Lecture COP3402 = new Lecture("COP 3402", "Systems Software", "", "CB2 106",
+                19, 30, 20, 45, TUESDAY, THURSDAY);
+        Lecture COP3402_LAB = new Lecture("COP 3402", "Systems Software Lab", "", "CB1 120",
+                15, 30, 16, 20, WEDNESDAY);
+        Lecture COP3503C = new Lecture("COP 3503C", "Computer Science 2", "", "HPA1 119",
+                16, 30, 17, 50, TUESDAY, THURSDAY);
+        Lecture COP3503C_LAB = new Lecture("COP 3503C", "Computer Science 2 Lab", "", "HEC 119",
+                18, 00, 18, 50, THURSDAY);
+        Lecture PHY2048C = new Lecture("PHY 2048C", "Physics 1", "", "MSB 260",
+                9, 30, 10, 20, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture PHY2048C_LAB = new Lecture("PHY 2048C", "Physics 1 Lab", "", "MSB 339",
+                12, 30, 15, 20, WEDNESDAY);
+
+        return Arrays.asList(COP3402, COP3402_LAB, COP3503C, COP3503C_LAB, PHY2048C, PHY2048C_LAB);
+    }
 }
