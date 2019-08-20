@@ -11,8 +11,8 @@ import static com.vegetarianbaconite.schedulelib.ScheduleUtil.ClassDay.TUESDAY;
 import static com.vegetarianbaconite.schedulelib.ScheduleUtil.ClassDay.WEDNESDAY;
 
 public class Schedules {
-    public static List<List<Lecture>> mySchedules = Arrays.asList(sophomoreFall(), sophomoreSpring(), freshmanSpring(), freshmanFall());
-    public static List<String> myScheduleNames = Arrays.asList("Fall 2018", "Spring 2019", "Spring 2018", "Fall 2017");
+    public static List<List<Lecture>> mySchedules = Arrays.asList(juniorFall(), sophomoreSpring(), sophomoreFall(), freshmanSpring(), freshmanFall());
+    public static List<String> myScheduleNames = Arrays.asList("Fall 2019", "Spring 2019", "Fall 2018", "Spring 2018", "Fall 2017");
 
     public static final List<Lecture> nullSchedule = new ArrayList<>();
 
@@ -23,7 +23,7 @@ public class Schedules {
     public static List<List<Lecture>> personalSchedules = Arrays.asList(sophomoreSpring(), natSpring2019(), ryanSpring2019(), jenSpring2019(), sebaSpring2019(), alexisSpring2019(), stevenSpring2019(), winstonSpring2019(), andrewSpring2019());
     public static List<String> personalNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba", "Alexis", "Steven", "Winston", "Andrew");
 
-    public static final List<Lecture> currentSemester = sophomoreSpring();
+    public static final List<Lecture> currentSemester = juniorFall();
 
     /* Mine */
     public static List<Lecture> freshmanFall() {
@@ -100,6 +100,23 @@ public class Schedules {
                 15, 15, 17, 00, FRIDAY);
 
         return Arrays.asList(CDA3013C, CDA3103C_LAB, COP4331, COP4331_LAB, COT4210, EDF4603, EDF4467, RED4043, FLL, aftercare);
+    }
+
+    public static List<Lecture> juniorFall() {
+        Lecture CNT4704 = new Lecture("CNT 4704", "Analysis of Networks", "Kanh Vu", "Online",
+                0, 0, 0, 0);
+        Lecture COP3402 = new Lecture("COP 3402", "Systems Software", "", "CB2 106",
+                19, 30, 20, 45, TUESDAY, THURSDAY);
+        Lecture COP3402_LAB = new Lecture("COP 3402", "Systems Software Lab", "", "CB1 120",
+                14, 30, 15, 20, WEDNESDAY);
+        Lecture COP4710 = new Lecture("COP 4710", "Database Systems", "Kanh Vu", "HPA 112",
+                18, 00, 19, 15, TUESDAY, THURSDAY);
+        Lecture STA4613 = new Lecture("STA 4613", "Statistics 2", "Brittany Durrani", "MSB 336",
+                11, 30, 12, 20, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture TSL4080 = new Lecture("TSL 4080", "ESOL", "Shayla Roberts", "TA 116",
+                10, 30, 13, 20, THURSDAY);
+
+        return Arrays.asList(CNT4704, COP3402, COP3402_LAB, COP4710, STA4613, TSL4080);
     }
 
     /* Fall 2018 */
