@@ -382,10 +382,10 @@ public class Schedules {
     }
 
     public static List<Lecture> alexisFall2019() {
-      Lecture MATH = new Lecture("IDK", "Math", "", "IDK",
-      7, 30, 9, 20, TUESDAY, THURSDAY);
-      Lecture STATICS = new Lecture("IDK", "Statics", "", "IDK",
+      Lecture EGN3310 = new Lecture("EGN 3310", "Statics", "", "HPA1 112",
       15, 00, 16, 20, TUESDAY, THURSDAY);
+      Lecture MAC2313 = new Lecture("MAC 2313", "Calc 3", "", "BA1 121",
+      7, 30, 9, 20, TUESDAY, THURSDAY);
 
       return Arrays.asList(MATH, STATICS);
     }
