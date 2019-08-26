@@ -376,4 +376,17 @@ public class Schedules {
 
         return Arrays.asList(COP3402, COP3402_LAB, COP3503C, COP3503C_LAB, PHY2048C, PHY2048C_LAB);
     }
+
+    public static List<Lecture> sebaFall2019() {
+      return new ArrayList<>();
+    }
+
+    public static List<Lecture> alexisFall2019() {
+      Lecture MATH = new Lecture("IDK", "Math", "", "IDK",
+      7, 30, 9, 20, TUESDAY, THURSDAY);
+      Lecture STATICS = new Lecture("IDK", "Statics", "", "IDK",
+      15, 00, 16, 20, TUESDAY, THURSDAY);
+
+      return Arrays.asList(MATH, STATICS);
+    }
 }
