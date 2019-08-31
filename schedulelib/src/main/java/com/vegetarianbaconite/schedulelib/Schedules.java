@@ -16,12 +16,12 @@ public class Schedules {
 
     public static final List<Lecture> nullSchedule = new ArrayList<>();
 
-    public static List<List<Lecture>> baconSchedules = Arrays.asList(nullSchedule, natSummer2019(), ryanSummer2019(), jenSummer2019(), nullSchedule, nullSchedule);
-    public static List<String> baconNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba", "Alexis");
-    public static List<List<Lecture>> dormSchedules = Arrays.asList(stevenSpring2019(), winstonSpring2019(), sophomoreSpring(), andrewSpring2019());
+    public static List<List<Lecture>> baconSchedules = Arrays.asList(juniorFall(), natSummer2019(), ryanSummer2019(), jenSummer2019(), nullSchedule, alexisFall2019());
+    public static List<String> baconNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Selena", "Alexis");
+    public static List<List<Lecture>> dormSchedules = Arrays.asList(nullSchedule, winstonFall2019(), juniorFall(), andrewFall2019());
     public static List<String> dormNames = Arrays.asList("Steven", "Winston", "Dominic", "Andrew");
-    public static List<List<Lecture>> personalSchedules = Arrays.asList(sophomoreSpring(), natSpring2019(), ryanSpring2019(), jenSpring2019(), sebaSpring2019(), alexisSpring2019(), stevenSpring2019(), winstonSpring2019(), andrewSpring2019());
-    public static List<String> personalNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Seba", "Alexis", "Steven", "Winston", "Andrew");
+    public static List<List<Lecture>> personalSchedules = Arrays.asList(juniorFall(), natFall2019(), ryanFall2019(), jenFall2019(), sebaFall2019(), alexisFall2019(), nullSchedule, winstonFall2019(), andrewFall2019());
+    public static List<String> personalNames = Arrays.asList("Dominic", "Natalie", "Ryan", "Jen", "Selena", "Alexis", "Steven", "Winston", "Andrew");
 
     public static final List<Lecture> currentSemester = juniorFall();
 
@@ -315,6 +315,7 @@ public class Schedules {
         return Arrays.asList(CHM2210, MAC1140, PCB3063, PHY2054, PHY2054_LAB);
     }
 
+    /* Summer 2019 */
     public static List<Lecture> jenSummer2019() {
         Lecture MAS3105 = new Lecture("MAS 3105", "Matrix and Linear", "", "MSB 121",
                 9, 00, 10, 50, MONDAY, TUESDAY, WEDNESDAY, THURSDAY);
@@ -387,6 +388,43 @@ public class Schedules {
       Lecture MAC2313 = new Lecture("MAC 2313", "Calc 3", "", "BA1 121",
       7, 30, 9, 20, TUESDAY, THURSDAY);
 
-      return Arrays.asList(MATH, STATICS);
+        return Arrays.asList(EGN3310, MAC2313);
+    }
+
+    public static List<Lecture> winstonFall2019() {
+        Lecture BCH4053 = new Lecture("BCH 4053", "Biochem 1", "", "PSY 108",
+                11, 30, 12, 20, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture CHM3120 = new Lecture("CHM 3120", "Analytical Chemistry", "", "HPA1 112",
+                10, 30, 11, 20, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture CHM3120L = new Lecture("CHM 3120L", "Analytical Chemistry Lab", "", "CHEM 304",
+                12, 30, 15, 20, THURSDAY);
+        Lecture CHM3215L = new Lecture("CHM 3215L", "Organic Lab Techniques 2", "", "CHEM 104",
+                13, 30, 19, 20, WEDNESDAY);
+        Lecture CHM3410 = new Lecture("CHM 3410", "Physical Chemistry 1", "", "HPA1 116",
+                9, 30, 10, 20, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture CHM3410L = new Lecture("CHM 3410", "Physical Chemistry 1", "", "NSC 108",
+                9, 30, 10, 20, TUESDAY);
+        Lecture PCB3233 = new Lecture("PCB 3233", "Immunology", "", "CB2 101",
+                12, 30, 13, 20, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture PCB3233L = new Lecture("PCB 3233L", "Immunology Lab", "", "HPA2 305",
+                8, 30, 11, 20, THURSDAY);
+
+        return Arrays.asList(BCH4053, CHM3120, CHM3120L, CHM3215L, CHM3410, CHM3410L, PCB3233, PCB3233L);
+    }
+
+    public static List<Lecture> andrewFall2019() {
+        Lecture EES4202C = new Lecture("EES 4202C", "Chemical Process Control", "", "ENG2 205",
+                10, 30, 11, 50, TUESDAY, THURSDAY);
+        Lecture EES4202C_LAB = new Lecture("EES 4202C", "Chemical Process Control Lab", "", "ENG1 136",
+                13, 00, 15, 50, TUESDAY);
+        Lecture ENV4210 = new Lecture("ENV 4210", "Pollution Control", "", "ENG2 205",
+                14, 30, 15, 20, MONDAY, WEDNESDAY, FRIDAY);
+        Lecture ENV4341 = new Lecture("ENV 4341", "Sustainable Resource Management", "", "ENG2 205",
+                9, 00, 10, 20, MONDAY, WEDNESDAY);
+        Lecture GEO1200 = new Lecture("GEO 1200", "Physical Geography", "", "CB1 121",
+                16, 30, 17, 45, MONDAY, WEDNESDAY);
+
+        return Arrays.asList(EES4202C, EES4202C_LAB, ENV4210, ENV4341, GEO1200);
+
     }
 }

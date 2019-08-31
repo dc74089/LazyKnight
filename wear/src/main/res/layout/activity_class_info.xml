@@ -18,32 +18,45 @@
             android:id="@+id/ciClass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:textAlignment="center"
             android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:text="EDF 2005" />
 
         <TextView
             android:id="@+id/ciName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="24sp" />
+            android:gravity="center_horizontal|center_vertical"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            tools:text="Intro to the Teaching Profession" />
 
         <TextView
             android:id="@+id/ciProfessor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp" />
+            android:gravity="center_horizontal|center_vertical"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            tools:text="Dr. Professorman" />
 
         <TextView
             android:id="@+id/ciRoom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp" />
+            android:gravity="center_horizontal|center_vertical"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            tools:text="AAA 666" />
 
         <TextView
             android:id="@+id/ciTimes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone" />
+            android:visibility="gone"
+            tools:text="TimeTimeTimeTime" />
 
     </LinearLayout>
 </FrameLayout>
