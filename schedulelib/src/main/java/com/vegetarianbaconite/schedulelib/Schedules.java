@@ -404,12 +404,8 @@ public class Schedules {
                 9, 30, 10, 20, MONDAY, WEDNESDAY, FRIDAY);
         Lecture CHM3410L = new Lecture("CHM 3410", "Physical Chemistry 1", "", "NSC 108",
                 9, 30, 10, 20, TUESDAY);
-        Lecture PCB3233 = new Lecture("PCB 3233", "Immunology", "", "CB2 101",
-                12, 30, 13, 20, MONDAY, WEDNESDAY, FRIDAY);
-        Lecture PCB3233L = new Lecture("PCB 3233L", "Immunology Lab", "", "HPA2 305",
-                8, 30, 11, 20, THURSDAY);
 
-        return Arrays.asList(BCH4053, CHM3120, CHM3120L, CHM3215L, CHM3410, CHM3410L, PCB3233, PCB3233L);
+        return Arrays.asList(BCH4053, CHM3120, CHM3120L, CHM3215L, CHM3410, CHM3410L);
     }
 
     public static List<Lecture> andrewFall2019() {
